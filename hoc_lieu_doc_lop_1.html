@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Liệu Số Tiếng Việt Lớp 1 - Sách Kết Nối Tri Thức</title>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #ffe66d;
+            --bg-color: #f0f4f8;
+            --text-color: #2d3436;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #d63031;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 8px auto;
+            padding: 5px;
+            flex: 1;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Nút điều hướng góc */
+        .top-left-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            z-index: 10;
+            transition: background 0.2s;
+        }
+        .top-left-btn:hover { background-color: #27ae60; }
+
+        .top-right-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            z-index: 10;
+            transition: background 0.2s;
+        }
+        .top-right-btn:hover { background-color: #d35400; }
+
+        /* 1. TRANG BÌA (CÓ ẢNH NỀN ANH1.PNG) */
+        #cover-screen {
+            position: relative;
+            text-align: center;
+            background: url('anh1.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            overflow: hidden;
+            min-height: 580px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+        }
+
+        .welcome-badge {
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(5px);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .welcome-badge h3 {
+            margin: 0 0 2px 0;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .welcome-badge p {
+            margin: 0;
+            color: #ffeaa7;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .start-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.5);
+            transition: transform 0.2s;
+        }
+        .start-btn:hover { transform: scale(1.06); }
+
+        /* 2. CÁC TRANG BÊN TRONG (SỬ DỤNG ẢNH NỀN ANH8.PNG) */
+        .inner-page-screen {
+            position: relative;
+            background: url('anh8.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px;
+            padding: 145px 20px 20px 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .page-header-banner {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(5px);
+            padding: 6px 20px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 2px solid #74b9ff;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .page-header-banner h3, .page-header-banner h2 { margin: 0 0 2px 0; color: #d63031; font-size: 1.1rem; }
+        .page-header-banner p { margin: 0; color: #2d3436; font-size: 0.8rem; font-weight: 600; }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 760px;
+        }
+
+        .topic-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border: 3px solid #74b9ff;
+        }
+        .topic-card:hover { transform: translateY(-3px); border-color: var(--secondary-color); }
+        .topic-card img { width: 100%; height: 75px; object-fit: contain; background: #f1f2f6; border-radius: 8px; }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 820px;
+            max-height: 45vh;
+            overflow-y: auto;
+            padding: 5px;
+        }
+
+        .lesson-card {
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 10px 12px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 3px solid #74b9ff;
+            transition: transform 0.2s;
+        }
+        .lesson-card:nth-child(1) { background: rgba(232, 244, 253, 0.95); border-color: #74b9ff; }
+        .lesson-card:nth-child(2) { background: rgba(232, 248, 245, 0.95); border-color: #55efc4; }
+        .lesson-card:nth-child(3) { background: rgba(254, 249, 231, 0.95); border-color: #ffeaa7; }
+        .lesson-card:nth-child(4) { background: rgba(253, 237, 236, 0.95); border-color: #fab1a0; }
+        .lesson-card:nth-child(5) { background: rgba(244, 236, 247, 0.95); border-color: #d7bde2; }
+
+        .lesson-card:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+        .lesson-card h4 { margin: 0 0 2px 0; color: #0984e3; font-size: 0.9rem; }
+        .lesson-card p { margin: 0 0 2px 0; font-size: 0.95rem; font-weight: bold; }
+        .lesson-card span { color: #636e72; font-size: 0.75rem; }
+
+        /* MÀN HÌNH ẢNH MINH HỌA LỚN */
+        .preview-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .preview-box h2 {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(5px);
+            padding: 6px 20px;
+            border-radius: 12px;
+            margin: 0 0 10px 0;
+            color: #0984e3;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border: 2px solid #74b9ff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .preview-img-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 8px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 4px solid #74b9ff;
+            margin-bottom: 12px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .preview-img-container img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .btn-listen-sample {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-listen-sample:hover { background-color: #2980b9; transform: scale(1.05); }
+
+        /* HỘP NỘI DUNG HỌC TẬP */
+        .study-box {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 15px 20px;
+            text-align: center;
+            max-width: 720px;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border: 3px solid #74b9ff;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .step-tag {
+            background: #e8f4fd;
+            color: #0984e3;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 8px;
+            border: 1px solid #74b9ff;
+            font-size: 0.85rem;
+        }
+
+        .audio-bar {
+            background: #f1f9fe;
+            border: 1px solid #b2dffc;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+
+        .audio-buttons { display: flex; gap: 8px; }
+        .btn-action {
+            background-color: #3498db; color: white; border: none; padding: 7px 14px; border-radius: 20px; cursor: pointer; font-weight: bold;
+            display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 0.85rem;
+        }
+        .btn-action:hover { background-color: #2980b9; }
+        .btn-stop { background-color: #e74c3c; }
+        .btn-stop:hover { background-color: #c0392b; }
+        .btn-next { background-color: #27ae60; margin-top: 12px; }
+        .btn-next:hover { background-color: #219653; }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 2.0;
+            text-align: justify;
+            background: #fffdfd;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid #f1f2f6;
+            margin-bottom: 12px;
+        }
+        .text-content p { margin: 0 0 8px 0; text-indent: 20px; }
+
+        .word { padding: 1px 3px; border-radius: 4px; transition: background-color 0.15s, color 0.15s; }
+        .word.active { background-color: var(--accent-color); color: #d63031; font-weight: bold; }
+        
+        /* Hiệu ứng karaoke chữ đỏ siêu chậm thong thả chuẩn giáo viên dạy lớp 1 */
+        .word.karaoke-read { background-color: #ffcccc; color: #c0392b; font-weight: bold; }
+
+        .vocab-box {
+            background: #e3fafc; border: 2px solid #70c1b3; padding: 8px 12px; border-radius: 10px; text-align: left; margin-bottom: 12px;
+        }
+        .vocab-box h4 { margin: 0 0 4px 0; color: #00796b; font-size: 0.9rem; }
+
+        .ai-feedback {
+            background: #fff3cd; border: 2px solid #ffeeba; padding: 12px; border-radius: 10px; margin-top: 12px; text-align: center;
+        }
+        .ai-feedback h3 { margin: 0 0 4px 0; color: #856404; font-size: 1rem; }
+
+        .quiz-question { text-align: left; font-weight: bold; margin-bottom: 8px; color: #2c3e50; font-size: 0.95rem; }
+        .quiz-options { display: flex; flex-direction: column; gap: 6px; text-align: left; margin-bottom: 12px; }
+        .quiz-opt { background: #f8f9fa; border: 2px solid #ced4da; padding: 7px 10px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; }
+        .quiz-opt:hover { background: #e2e6ea; }
+        .quiz-opt.correct { background: #d4edda !important; border-color: #28a745; color: #155724; font-weight: bold; }
+        .quiz-opt.wrong { background: #f8d7da !important; border-color: #dc3545; color: #721c24; }
+
+        /* Style cho bài tập mở rộng */
+        .exercise-card { background: #f8f9fa; border: 2px solid #b2dffc; padding: 12px; border-radius: 10px; margin-bottom: 10px; text-align: left; }
+        .exercise-card h4 { margin: 0 0 6px 0; color: #0984e3; font-size: 0.95rem; }
+        .match-row, .fill-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 10px; }
+        .tf-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; background: #fff; padding: 6px 10px; border-radius: 6px; border: 1px solid #ddd; }
+        select, input { padding: 5px 8px; border-radius: 6px; border: 1px solid #bdc3c7; font-size: 0.9rem; }
+
+        .hidden { display: none !important; }
+        footer { text-align: center; padding: 10px; background: #dfe6e9; color: #636e72; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌟 HỌC LIỆU SỐ TIẾNG VIỆT LỚP 1 - KẾT NỐI TRI THỨC 🌟</h1>
+    </header>
+
+    <div class="container">
+        <!-- 1. TRANG BÌA -->
+        <div id="cover-screen">
+            <div class="welcome-badge">
+                <h3>Xin chào bạn!</h3>
+                <p>Chúng mình cùng nhau luyện đọc và khám phá bài học nhé!</p>
+            </div>
+            <button class="start-btn" onclick="goToTopics()">BẮT ĐẦU HỌC</button>
+        </div>
+
+        <!-- 2. CHỌN CHỦ ĐỀ -->
+        <div id="topic-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <div class="page-header-banner">
+                <h3 style="margin:0; color:#d63031; font-size:1.1rem;">Chọn chủ đề học tập</h3>
+                <p>Hôm nay em muốn học chủ đề nào?</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card" onclick="openTopicList(1)"><img src="anh2.png" alt="Chủ đề 1"><h3>Chủ đề 1: Tôi và các bạn</h3></div>
+                <div class="topic-card" onclick="openTopicList(2)"><img src="anh3.png" alt="Chủ đề 2"><h3>Chủ đề 2: Mái ấm gia đình</h3></div>
+                <div class="topic-card" onclick="openTopicList(3)"><img src="anh4.png" alt="Chủ đề 3"><h3>Chủ đề 3: Bài học từ cuộc sống</h3></div>
+                <div class="topic-card" onclick="openTopicList(4)"><img src="anh5.png" alt="Chủ đề 4"><h3>Chủ đề 4: Thiên nhiên kì thú</h3></div>
+            </div>
+        </div>
+
+        <!-- 3. DANH SÁCH BÀI HỌC -->
+        <div id="lesson-list-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToTopics()">⬅ Quay lại</button>
+            <div class="page-header-banner">
+                <h2 id="current-topic-name" style="margin:0; color:#0984e3; font-size:1.1rem;">Tên chủ đề</h2>
+                <p>Bấm chọn bài học em muốn luyện tập!</p>
+            </div>
+            <div id="lessons-container" class="lessons-grid"></div>
+        </div>
+
+        <!-- BƯỚC 1: HIỂN THỊ ẢNH MINH HỌA LỚN -->
+        <div id="step-sample-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goBackToList()">⬅ Quay lại</button>
+            <div class="preview-box">
+                <h2 id="sample-title-preview">Tôi là học sinh lớp 1</h2>
+                <div class="preview-img-container">
+                    <img id="lesson-preview-img" src="anh6.png" alt="Minh họa bài đọc">
+                </div>
+                <button class="btn-listen-sample" onclick="goToReadingContent()">
+                    🎧 Bấm để nghe đọc mẫu
+                </button>
+            </div>
+        </div>
+
+        <!-- BƯỚC 1.2: NỘI DUNG BÀI ĐỌC & ĐỌC MẪU -->
+        <div id="step-reading-content-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToSample()">⬅ Quay lại</button>
+            <div class="study-box">
+                <div class="step-tag">NGHE ĐỌC MẪU TOÀN BÀI</div>
+                <div class="audio-bar">
+                    <div class="audio-bar-left">
+                        <img src="anh7.png" alt="Loa" style="width:28px; vertical-align:middle;">
+                        <span>Lắng nghe thầy cô đọc mẫu tổng quan bài học nhé!</span>
+                    </div>
+                    <div class="audio-buttons">
+                        <button class="btn-action" onclick="playSampleAudio()">▶ Nghe mẫu</button>
+                        <button class="btn-action btn-stop" onclick="stopAudioAndPause()">⏹ Dừng</button>
+                    </div>
+                </div>
+                <h2 id="sample-title" style="font-size:1.25rem; margin-top:5px;">Tiêu đề bài học</h2>
+                <div id="sample-content" class="text-content">Nội dung...</div>
+                <button class="btn-action btn-next" onclick="goToStepSentence()">Chuyển sang Luyện đọc câu ➡</button>
+            </div>
+        </div>
+
+        <!-- BƯỚC 2: LUYỆN ĐỌC CÂU & GIẢI NGHĨA TỪ -->
+        <div id="step-sentence-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToReadingContent()">⬅ Quay lại</button>
+            <div class="study-box">
+                <div class="step-tag">BƯỚC 2: LUYỆN ĐỌC CÂU & GIẢI NGHĨA TỪ</div>
+                
+                <div class="vocab-box">
+                    <h4>💡 Giải nghĩa từ khó:</h4>
+                    <p id="vocab-text" style="margin:0; font-size:0.9rem; color:#004d40;">Đang tải từ vựng...</p>
+                </div>
+
+                <div class="audio-bar">
+                    <span id="mic-status-label">🎤 Bấm "Đọc theo" và đọc to thành tiếng:</span>
+                    <div class="audio-buttons">
+                        <button class="btn-action" onclick="playCurrentSentence()">▶ Đọc mẫu</button>
+                        <button class="btn-action btn-stop" onclick="stopSentenceAudioAndPause()">⏹ Dừng</button>
+                        <button class="btn-action" id="btn-record-action" style="background:#8e44ad;" onclick="startSpeechRecognitionRecord()">🎙️ Đọc theo (Nhận diện)</button>
+                    </div>
+                </div>
+
+                <h3 id="sentence-title" style="color:#0984e3; margin:4px 0; font-size:1.05rem;">Câu hiện tại</h3>
+                <div id="sentence-display" class="text-content" style="font-size:1.1rem; text-align:center;">Nội dung câu...</div>
+
+                <div id="sentence-ai-feedback" class="ai-feedback hidden" style="margin-top: 10px; margin-bottom: 10px; padding: 10px; text-align: left;">
+                    <h4 id="sentence-grade" style="margin:0 0 4px 0; color:#856404; font-size:0.95rem;">🌟 Thỏ thông thái nhận xét:</h4>
+                    <p id="sentence-comment" style="margin:0; font-size:0.85rem; color:#333; line-height: 1.5;"></p>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                    <button class="btn-action" onclick="prevSentence()">⬅ Câu trước</button>
+                    <span id="sentence-counter" style="font-weight:bold; font-size:0.9rem;">Câu 1 / 3</span>
+                    <button class="btn-action" onclick="nextSentence()">Câu sau ➡</button>
+                </div>
+
+                <button class="btn-action btn-next" onclick="goToStepFullRead()">Chuyển sang Luyện đọc toàn bài ➡</button>
+            </div>
+        </div>
+
+        <!-- BƯỚC 3: LUYỆN ĐỌC TOÀN BÀI & THỎ THÔNG THÁI CHẤM ĐIỂM -->
+        <div id="step-fullread-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToSentence()">⬅ Quay lại</button>
+            <div class="study-box">
+                <div class="step-tag">BƯỚC 3: LUYỆN ĐỌC TOÀN BÀI & THỎ THÔNG THÁI (AI) CHẤM ĐIỂM</div>
+                
+                <div class="audio-bar">
+                    <span id="fullread-mic-status">Em hãy tự đọc to toàn bài, sau đó nhờ Thỏ thông thái chấm điểm nhé!</span>
+                    <div class="audio-buttons">
+                        <button class="btn-action btn-stop" onclick="stopFullReadAndEvaluate()">⏹ Dừng / Chấm điểm</button>
+                        <button class="btn-action" id="btn-fullread-record" style="background:#8e44ad;" onclick="startFullReadRecognitionRecord()">🎙️ Đọc toàn bài (Nhận diện)</button>
+                    </div>
+                </div>
+
+                <h2 id="fullread-title" style="font-size:1.25rem; margin-top:5px;">Tiêu đề bài học</h2>
+                <div id="fullread-content" class="text-content">Nội dung toàn bài...</div>
+
+                <div id="fullread-ai-feedback" class="ai-feedback hidden" style="margin-top: 10px; margin-bottom: 10px; padding: 10px; text-align: left;">
+                    <h4 id="fullread-grade" style="margin:0 0 4px 0; color:#856404; font-size:0.95rem;">🌟 Thỏ thông thái nhận xét toàn bài:</h4>
+                    <p id="fullread-comment" style="margin:0; font-size:0.85rem; color:#333; line-height: 1.5;"></p>
+                </div>
+
+                <button class="btn-action btn-next" onclick="goToStepQuiz()">Chuyển sang Câu hỏi Đọc hiểu ➡</button>
+            </div>
+        </div>
+
+        <!-- BƯỚC 4: ĐỌC HIỂU TRẮC NGHIỆM -->
+        <div id="step-quiz-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToFullRead()">⬅ Quay lại</button>
+            <div class="study-box">
+                <div class="step-tag">BƯỚC 4: TRẢ LỜI CÂU HỎI TRẮC NGHIỆM</div>
+                
+                <div id="quiz-container">
+                    <div class="quiz-question" id="quiz-q-text">Câu hỏi đọc hiểu: ...</div>
+                    <div class="quiz-options" id="quiz-options-container"></div>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                    <button class="btn-action" id="quiz-prev-btn" onclick="prevQuizQuestion()">⬅ Câu trước</button>
+                    <span id="quiz-counter" style="font-weight:bold; font-size:0.9rem;">Câu 1 / 5</span>
+                    <button class="btn-action" id="quiz-next-btn" onclick="nextQuizQuestion()">Câu sau ➡</button>
+                </div>
+
+                <button class="btn-action btn-next hidden" id="finish-quiz-btn" onclick="goToStepPractice()" style="margin-top:15px;">Chuyển sang Bài tập Luyện tập ➡</button>
+            </div>
+        </div>
+
+        <!-- BƯỚC 5: BÀI TẬP LUYỆN TẬP MỞ RỘNG (NỐI GHÉP, ĐÚNG/SAI, ĐIỀN VÀO CHỖ TRỐNG) -->
+        <div id="step-practice-screen" class="inner-page-screen hidden">
+            <button class="top-left-btn" onclick="goToCover()">🏠 Trang chủ</button>
+            <button class="top-right-btn" onclick="goToQuiz()">⬅ Quay lại</button>
+            <div class="study-box">
+                <div class="step-tag">BƯỚC 5: LUYỆN TẬP MỞ RỘNG (NỐI GHÉP, ĐÚNG/SAI, ĐIỀN CHỮ)</div>
+
+                <!-- Dạng 1: Nối ghép 5 thông tin -->
+                <div class="exercise-card">
+                    <h4>1. Nối ghép thông tin cho đúng nội dung bài học (5 ý):</h4>
+                    <div id="match-container"></div>
+                </div>
+
+                <!-- Dạng 2: 7 câu Đúng / Sai -->
+                <div class="exercise-card">
+                    <h4>2. Nhận định Đúng (Đ) hay Sai (S) theo nội dung bài (7 câu):</h4>
+                    <div id="tf-container"></div>
+                </div>
+
+                <!-- Dạng 3: Điền vào chỗ trống -->
+                <div class="exercise-card">
+                    <h4>3. Điền từ thích hợp vào chỗ trống:</h4>
+                    <div id="fill-container"></div>
+                </div>
+
+                <button class="btn-action btn-next" onclick="checkPracticeResults()" style="margin-top:10px;">✨ Kiểm tra kết quả</button>
+                <div id="practice-result-msg" style="margin-top: 10px; font-weight: bold; color: #d63031;"></div>
+
+                <button class="btn-action btn-next hidden" id="final-done-btn" onclick="finishLesson()" style="margin-top:15px;">🎉 Hoàn thành bài học!</button>
+            </div>
+        </div>
+
+        <!-- MÀN HÌNH HOÀN THÀNH -->
+        <div id="step-done-screen" class="inner-page-screen hidden">
+            <div class="study-box" style="text-align:center; padding:25px;">
+                <h1 style="color:#27ae60; font-size:2rem; margin-top:0;">🎉 XUẤT SẮC HOÀN THÀNH BÀI HỌC! 🎉</h1>
+                <p style="font-size:1.1rem; color:#555;">Bé đã hoàn thành xuất sắc các thử thách đọc mẫu, luyện đọc, trắc nghiệm và bài tập luyện tập mở rộng!</p>
+                <img src="anh6.png" alt="Bé ngoan" style="width:140px; border-radius:15px; margin:10px 0; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+                <div>
+                    <button class="btn-action" onclick="goToTopics()">📚 Chọn bài học khác</button>
+                    <button class="btn-action btn-stop" onclick="goToCover()">🏠 Về trang chủ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Học liệu số hỗ trợ giáo dục tiểu học - Sách Kết nối tri thức với cuộc sống</p>
+    </footer>
+
+    <script>
+        const curriculumData = {
+            1: {
+                title: "Chủ đề 1: Tôi và các bạn",
+                lessons: [
+                    { 
+                        id: 101, name: "Bài 1", title: "Tôi là học sinh lớp 1", image: "anh6.png",
+                        paragraphs: [ "Tôi tên là Nam, học sinh lớp 1A, Trường Tiểu học Lê Quý Đôn. Ngày đầu đi học, mặc bộ đồng phục của trường, tôi hãnh diện lắm.", "Hồi đầu năm học, tôi mới học chữ cái. Thế mà bây giờ, tôi đã đọc được truyện tranh. Tôi còn biết làm toán nữa. Tôi có thêm nhiều bạn mới.", "Ai cũng bảo từ khi đi học, tôi chững chạc hẳn lên." ], 
+                        author: "(Trung Sơn)",
+                        vocab: "• Hãnh diện: tự hào, vui sướng khi cảm thấy mình đạt được điều tốt đẹp.\n• Chững chạc: ra dáng người lớn, điềm đạm, không trẻ con.",
+                        quiz: [
+                            { q: "Bạn Nam học lớp mấy?", options: ["Lớp 1A", "Lớp 2B", "Lớp 1C", "Lớp 1D"], correct: 0 },
+                            { q: "Khi mặc bộ đồng phục của trường, Nam cảm thấy thế nào?", options: ["Lo lắng", "Hãnh diện lắm", "Buồn bã", "Sợ hãi"], correct: 1 },
+                            { q: "Hồi đầu năm học, Nam đã học gì?", options: ["Học chữ cái", "Học tiếng Anh", "Học vẽ tranh", "Học hát"], correct: 0 },
+                            { q: "Bây giờ Nam biết làm gì?", options: ["Biết nấu cơm", "Biết làm toán và đọc truyện tranh", "Biết đá bóng", "Biết bơi"], correct: 1 },
+                            { q: "Từ khi đi học, mọi người thấy Nam thế nào?", options: ["Trẻ con hơn", "Chững chạc hẳn lên", "Nhút nhát hơn", "Lười biếng hơn"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Nam học trường", right: "Trường Tiểu học Lê Quý Đôn" },
+                                { left: "2. Ngày đầu đi học mặc đồng phục", right: "Nam hãnh diện lắm" },
+                                { left: "3. Hồi đầu năm học Nam mới học", right: "Chữ cái" },
+                                { left: "4. Bây giờ Nam đã đọc được", right: "Truyện tranh" },
+                                { left: "5. Mọi người bảo Nam từ khi đi học", right: "Chững chạc hẳn lên" }
+                            ],
+                            tf: [
+                                { q: "Nam là học sinh lớp 1A.", ans: true },
+                                { q: "Trường tiểu học của Nam tên là Nguyễn Trãi.", ans: false },
+                                { q: "Ngày đầu đi học Nam rất buồn.", ans: false },
+                                { q: "Hồi đầu năm Nam mới học chữ cái.", ans: true },
+                                { q: "Bây giờ Nam đã đọc được truyện tranh.", ans: true },
+                                { q: "Nam không biết làm toán.", ans: false },
+                                { q: "Mọi người khen Nam chững chạc hẳn lên.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Nam là học sinh lớp [___]A.", answer: "1" },
+                                { text: "Ngày đầu đi học, Nam mặc bộ [___] của trường.", answer: "đồng phục" },
+                                { text: "Bây giờ Nam đã đọc được truyện [___].", answer: "tranh" },
+                                { text: "Nam còn biết làm [___] nữa.", answer: "toán" },
+                                { text: "Từ khi đi học, Nam [___] hẳn lên.", answer: "chững chạc" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 102, name: "Bài 2", title: "Đôi tai xấu xí", image: "anh6.png",
+                        paragraphs: [ "Thỏ con có đôi tai dài và to nên hay bị các bạn chọc ghẹo trong khu rừng.", "Nhưng nhờ đôi tai thính đó, Thỏ con đã nghe thấy tiếng sói dữ từ xa và kịp thời báo động cho cả đàn chạy trốn an toàn.", "Từ đó, ai cũng yêu quý đôi tai đặc biệt của Thỏ con." ], 
+                        author: "(Truyện ngụ ngôn)",
+                        vocab: "• Chọc ghẹo: trêu chọc làm người khác khó chịu.\n• Kịp thời: đúng lúc, không bị chậm trễ.",
+                        quiz: [
+                            { q: "Thỏ con có đặc điểm gì khiến hay bị chọc ghẹo?", options: ["Đôi tai dài và to", "Đôi chân ngắn", "Chiếc đuôi dài", "Bộ lông xù"], correct: 0 },
+                            { q: "Nhờ đâu Thỏ con nghe thấy tiếng sói dữ từ xa?", options: ["Đôi mắt tinh", "Đôi tai dài và thính", "Chiếc mũi nhạy", "Bộ râu dài"], correct: 1 },
+                            { q: "Thỏ con đã làm gì khi nghe thấy tiếng sói dữ?", options: ["Bỏ chạy một mình", "Kịp thời báo động cho cả đàn", "Kêu cứu ẩm ĩ", "Đứng im tại chỗ"], correct: 1 },
+                            { q: "Cả đàn nhờ Thỏ con mà tránh được điều gì?", options: ["Tránh được cơn mưa", "Tránh được sói dữ", "Tránh được thợ săn", "Tránh được lạc đường"], correct: 1 },
+                            { q: "Sau sự việc đó, mọi người đối với Thỏ con thế nào?", options: ["Chê cười", "Yêu quý đôi tai đặc biệt", "Xa lánh", "Ghét bỏ"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Thỏ con có đôi tai", right: "Dài và to" },
+                                { left: "2. Thỏ con hay bị các bạn", right: "Chọc ghẹo" },
+                                { left: "3. Thỏ con nghe thấy tiếng", right: "Sói dữ từ xa" },
+                                { left: "4. Thỏ kịp thời báo động cho", right: "Cả đàn chạy trốn an toàn" },
+                                { left: "5. Mọi người ai cũng yêu quý", right: "Đôi tai đặc biệt của Thỏ" }
+                            ],
+                            tf: [
+                                { q: "Thỏ con có đôi tai ngắn và nhỏ.", ans: false },
+                                { q: "Thỏ con hay bị các bạn chọc ghẹo.", ans: true },
+                                { q: "Thỏ con không nghe thấy tiếng sói dữ.", ans: false },
+                                { q: "Nhờ đôi tai thính, Thỏ nghe tiếng sói từ xa.", ans: true },
+                                { q: "Thỏ con kịp thời báo động cho cả đàn.", ans: true },
+                                { q: "Cả đàn bị sói bắt vì Thỏ không báo.", ans: false },
+                                { q: "Cuối cùng ai cũng yêu quý đôi tai Thỏ.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Thỏ con có đôi tai dài và [___].", answer: "to" },
+                                { text: "Thỏ con hay bị các bạn chọc [___].", answer: "ghẹo" },
+                                { text: "Nhờ đôi tai thính, Thỏ nghe thấy tiếng [___] dữ.", answer: "sói" },
+                                { text: "Thỏ kịp thời báo động cho cả đàn chạy trốn [___].", answer: "an toàn" },
+                                { text: "Ai cũng yêu quý đôi tai [___] của Thỏ con.", answer: "đặc biệt" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 103, name: "Bài 3", title: "Bạn của gió", image: "anh6.png",
+                        paragraphs: [ "Gió thích bay lượn khắp mọi nơi trên bầu trời cao rộng.", "Gió chơi đùa cùng những cánh diều giấy, thổi mát rượi cho các bác nông dân đang làm việc và ru những chiếc lá cây ngủ ngon mỗi trưa hè." ], 
+                        author: "(Sưu tầm)",
+                        vocab: "• Bay lượn: di chuyển nhẹ nhàng trên không trung.\n• Mát rượi: cảm giác rất dễ chịu khi có gió thổi vào những ngày nóng.",
+                        quiz: [
+                            { q: "Gió thích làm gì trên bầu trời?", options: ["Ngủ ngày", "Bay lượn khắp mọi nơi", "Ngồi một chỗ", "Trốn tìm"], correct: 1 },
+                            { q: "Gió chơi đùa cùng vật gì trên cao?", options: ["Những cánh diều giấy", "Những đám mây đen", "Những chú chim", "Những chiếc máy bay"], correct: 0 },
+                            { q: "Gió thổi mát rượi cho ai đang làm việc?", options: ["Các bác nông dân", "Các bạn học sinh", "Các cô chú công nhân", "Các bác sĩ"], correct: 0 },
+                            { q: "Vào mỗi trưa hè, gió làm gì cho lá cây?", options: ["Làm rụng lá", "Ru những chiếc lá cây ngủ ngon", "Làm khô lá", "Thổi bay lá"], correct: 1 },
+                            { q: "Qua bài, gió được miêu tả như thế nào?", options: ["Hung dữ", "Tốt bụng, chăm chỉ mang lại niềm vui", "Lười biếng", "Đáng sợ"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Gió thích bay lượn khắp mọi nơi", right: "Trên bầu trời cao rộng" },
+                                { left: "2. Gió chơi đùa cùng", right: "Những cánh diều giấy" },
+                                { left: "3. Gió thổi mát rượi cho", right: "Các bác nông dân đang làm việc" },
+                                { left: "4. Gió ru những chiếc lá cây", right: "Ngủ ngon mỗi trưa hè" },
+                                { left: "5. Gió mang lại niềm vui", right: "Cho muôn loài" }
+                            ],
+                            tf: [
+                                { q: "Gió thích đứng yên một chỗ.", ans: false },
+                                { q: "Gió bay lượn khắp bầu trời cao rộng.", ans: true },
+                                { q: "Gió chơi đùa cùng cánh diều giấy.", ans: true },
+                                { q: "Gió làm cho nông dân thấy nóng bức.", ans: false },
+                                { q: "Gió thổi mát rượi cho bác nông dân làm việc.", ans: true },
+                                { q: "Gió ru lá cây ngủ ngon mỗi trưa hè.", ans: true },
+                                { q: "Gió là người bạn tốt của thiên nhiên.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Gió thích bay lượn trên bầu trời cao [___].", answer: "rộng" },
+                                { text: "Gió chơi đùa cùng những cánh diều [___].", answer: "giấy" },
+                                { text: "Gió thổi mát rượi cho các bác nông [___].", answer: "dân" },
+                                { text: "Gió ru những chiếc lá cây ngủ [___] mỗi trưa hè.", answer: "ngon" },
+                                { text: "Gió là người bạn [___] của mọi người.", answer: "tốt" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 104, name: "Bài 4", title: "Giải thưởng tình bạn", image: "anh6.png",
+                        paragraphs: [ "Trong hội thi chạy đua của khu rừng, Sóc nhỏ đang dẫn đầu thì thấy Nhím con bị vấp ngã đau.", "Sóc liền dừng chân đỡ Nhím dậy. Dù không giành huy chương vàng, Sóc lại nhận được giải thưởng tình bạn vô cùng quý giá." ], 
+                        author: "(Hạt giống tâm hồn)",
+                        vocab: "• Dẫn đầu: đi ở vị trí trước tiên trong đoàn đua.\n• Quý giá: có giá trị to lớn về tình cảm hoặc vật chất.",
+                        quiz: [
+                            { q: "Sóc nhỏ đang ở vị trí nào trong hội thi chạy đua?", options: ["Đang đứng cuối", "Đang dẫn đầu", "Đang nghỉ ngơi", "Chưa xuất phát"], correct: 1 },
+                            { q: "Sóc nhỏ đã thấy ai bị vấp ngã đau?", options: ["Thỏ con", "Nhím con", "Khỉ con", "Gấu con"], correct: 1 },
+                            { q: "Sóc nhỏ đã hành động thế nào khi thấy Nhím ngã?", options: ["Chạy thật nhanh về đích", "Dừng chân đỡ Nhím dậy", "Cười chê", "Bỏ mặc Nhím"], correct: 1 },
+                            { q: "Sóc nhỏ có giành được huy chương vàng không?", options: ["Có", "Không", "Được huy chương bạc", "Được giải nhất"], correct: 1 },
+                            { q: "Sóc nhỏ nhận được giải thưởng gì vô cùng quý giá?", options: ["Giải thưởng tình bạn", "Giải chạy nhanh", "Giải khéo léo", "Giải dũng cảm"], correct: 0 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Trong hội thi chạy đua", right: "Sóc nhỏ đang dẫn đầu" },
+                                { left: "2. Sóc thấy Nhím con", right: "Bị vấp ngã đau" },
+                                { left: "3. Sóc liền dừng chân", right: "Đỡ Nhím dậy" },
+                                { left: "4. Sóc không giành được", right: "Huy chương vàng" },
+                                { left: "5. Sóc nhận được giải thưởng", right: "Tình bạn vô cùng quý giá" }
+                            ],
+                            tf: [
+                                { q: "Hội thi diễn ra ở dòng sông lớn.", ans: false },
+                                { q: "Sóc nhỏ đang dẫn đầu hội thi chạy đua.", ans: true },
+                                { q: "Nhím con bị vấp ngã đau.", ans: true },
+                                { q: "Sóc cứ chạy tiếp không thèm nhìn Nhím.", ans: false },
+                                { q: "Sóc dừng chân đỡ Nhím dậy.", ans: true },
+                                { q: "Sóc giành được huy chương vàng.", ans: false },
+                                { q: "Sóc nhận được giải thưởng tình bạn quý giá.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Trong hội thi chạy đua, Sóc nhỏ đang dẫn [___].", answer: "đầu" },
+                                { text: "Sóc thấy Nhím con bị vấp ngã [___].", answer: "đau" },
+                                { text: "Sóc liền dừng chân đỡ Nhím [___].", answer: "dậy" },
+                                { text: "Sóc không giành được huy chương [___].", answer: "vàng" },
+                                { text: "Sóc nhận được giải thưởng tình [___] quý giá.", answer: "bạn" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 105, name: "Bài 5", title: "Sinh nhật của voi con", image: "anh6.png",
+                        paragraphs: [ "Hôm nay là sinh nhật Voi con. Các bạn muông thú trong rừng cùng nhau chuẩn bị món quà bất ngờ.", "Khỉ mang chuối chín, Thỏ đem cà rốt còn Sóc tặng hạt dẻ thơm ngon chúc mừng Voi con." ], 
+                        author: "(Thơ thiếu nhi)",
+                        vocab: "• Muông thú: tổng hợp các loài thú vật sống trong rừng.\n• Bất ngờ: điều xảy ra không báo trước khiến người ta ngạc nhiên vui sướng.",
+                        quiz: [
+                            { q: "Hôm nay là ngày gì của Voi con?", options: ["Ngày khai giảng", "Sinh nhật của Voi con", "Ngày hội thể thao", "Ngày tết thiếu nhi"], correct: 1 },
+                            { q: "Các bạn muông thú trong rừng đã làm gì?", options: ["Cùng nhau đi ngủ", "Chuẩn bị món quà bất ngờ", "Đi tìm thức ăn", "Tổ chức hội làng"], correct: 1 },
+                            { q: "Bạn Khỉ mang quà gì đến tặng Voi con?", options: ["Chuối chín", "Cà rốt", "Hạt dẻ", "Mật ong"], correct: 0 },
+                            { q: "Bạn Thỏ mang quà gì đến tặng Voi con?", options: ["Cà rốt", "Chuối chín", "Hạt dẻ", "Bánh kem"], correct: 0 },
+                            { q: "Bạn Sóc tặng quà gì chúc mừng Voi con?", options: ["Hạt dẻ thơm ngon", "Kẹo ngọt", "Hạt ngô", "Quả táo"], correct: 0 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Hôm nay là sinh nhật", right: "Của Voi con" },
+                                { left: "2. Các bạn muông thú chuẩn bị", right: "Món quà bất ngờ" },
+                                { left: "3. Bạn Khỉ mang tặng", right: "Chuối chín" },
+                                { left: "4. Bạn Thỏ mang tặng", right: "Cà rốt" },
+                                { left: "5. Bạn Sóc tặng", right: "Hạt dẻ thơm ngon" }
+                            ],
+                            tf: [
+                                { q: "Hôm nay là sinh nhật của Voi con.", ans: true },
+                                { q: "Hôm nay là sinh nhật của Thỏ con.", ans: false },
+                                { q: "Muông thú trong rừng cùng chuẩn bị quà.", ans: true },
+                                { q: "Khỉ mang cà rốt tặng Voi con.", ans: false },
+                                { q: "Khỉ mang chuối chín tặng Voi con.", ans: true },
+                                { q: "Thỏ đem cà rốt chúc mừng Voi con.", ans: true },
+                                { q: "Sóc tặng hạt dẻ thơm ngon cho Voi con.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Hôm nay là sinh nhật của [___] con.", answer: "Voi" },
+                                { text: "Các bạn muông thú chuẩn bị món quà bất [___].", answer: "ngờ" },
+                                { text: "Khỉ mang chuối [___] tặng Voi con.", answer: "chín" },
+                                { text: "Thỏ đem cà [___] chúc mừng Voi con.", answer: "rốt" },
+                                { text: "Sóc tặng hạt dẻ thơm [___] cho Voi con.", answer: "ngon" }
+                            ]
+                        }
+                    }
+                ]
+            },
+            2: {
+                title: "Chủ đề 2: Mái ấm gia đình",
+                lessons: [
+                    { 
+                        id: 201, name: "Bài 1", title: "Bữa cơm gia đình", image: "anh6.png",
+                        paragraphs: [ "Mỗi chiều tối, mâm cơm gia đình luôn ấm cúng với canh rau ngọt mát và cá kho thơm lừng.", "Cả nhà cùng quây quần ăn uống và trò chuyện rôm rả sau một ngày làm việc, học tập vất vả." ], 
+                        author: "(Bếp ấm gia đình)",
+                        vocab: "• Quây quần: tụ họp lại xung quanh người thân.\n• Ấm cúng: mang lại cảm giác thân tình, gần gũi.",
+                        quiz: [
+                            { q: "Mâm cơm gia đình diễn ra vào thời gian nào?", options: ["Buổi sáng", "Buổi trưa", "Buổi chiều tối", "Ban đêm"], correct: 2 },
+                            { q: "Mâm cơm có những món ăn nào?", options: ["Canh rau ngọt mát và cá kho thơm lừng", "Phở bò và bánh mì", "Gà rán và khoai tây chiên", "Bún chả và nem rán"], correct: 0 },
+                            { q: "Cả nhà cùng làm gì bên mâm cơm?", options: ["Xem ti vi", "Quây quần ăn uống và trò chuyện rôm rả", "Đi ngủ", "Đọc sách im lặng"], correct: 1 },
+                            { q: "Mâm cơm gia đình mang lại cảm giác gì?", options: ["Lạnh lẽo", "Ấm cúng, gần gũi", "Sợ hãi", "Buồn chán"], correct: 1 },
+                            { q: "Mọi người trò chuyện sau khi nào?", options: ["Sau một ngày làm việc, học tập vất vả", "Sau khi đi chơi xa", "Sau khi xem phim", "Sau khi ngủ dậy"], correct: 0 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Mâm cơm gia đình diễn ra vào", right: "Mỗi chiều tối" },
+                                { left: "2. Mâm cơm có canh rau ngọt mát và", right: "Cá kho thơm lừng" },
+                                { left: "3. Cả nhà cùng quây quần", right: "Ăn uống và trò chuyện rôm rả" },
+                                { left: "4. Mâm cơm mang lại cảm giác", right: "Ấm cúng" },
+                                { left: "5. Mọi người trò chuyện sau một ngày", right: "Làm việc, học tập vất vả" }
+                            ],
+                            tf: [
+                                { q: "Mâm cơm gia đình diễn ra vào buổi trưa.", ans: false },
+                                { q: "Mâm cơm diễn ra vào mỗi chiều tối.", ans: true },
+                                { q: "Mâm cơm có canh rau và cá kho.", ans: true },
+                                { q: "Cả nhà ăn uống và trò chuyện rôm rả.", ans: true },
+                                { q: "Mọi người ngồi im lặng không nói gì.", ans: false },
+                                { q: "Bữa cơm đem lại cảm giác ấm cúng.", ans: true },
+                                { q: "Mọi người trò chuyện sau ngày làm việc vất vả.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Mâm cơm gia đình luôn ấm [___].", answer: "cúng" },
+                                { text: "Mâm cơm có canh rau ngọt [___] và cá kho.", answer: "mát" },
+                                { text: "Cả nhà cùng quây [___] ăn uống trò chuyện.", answer: "quần" },
+                                { text: "Mọi người trò chuyện rôm [___] bên mâm cơm.", answer: "rả" },
+                                { text: "Bữa cơm diễn ra vào mỗi chiều [___].", answer: "tối" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 202, name: "Bài 2", title: "Mẹ của em", image: "anh6.png",
+                        paragraphs: [ "Mẹ là người chăm sóc em từng giấc ngủ đến bữa ăn hằng ngày.", "Khi em ốm, mẹ thức suốt đêm lo lắng, chườm trán cho em. Tình yêu thương của mẹ bao la như biển cả." ], 
+                        author: "(Thơ ca)",
+                        vocab: "• Chăm sóc: lo lắng và phục vụ tận tình chu đáo.\n• Bao la: rộng lớn không bờ bến.",
+                        quiz: [
+                            { q: "Mẹ là người chăm sóc em những gì?", options: ["Từng giấc ngủ đến bữa ăn hằng ngày", "Quần áo đẹp", "Đồ chơi mới", "Tiền bạc"], correct: 0 },
+                            { q: "Khi em ốm, mẹ đã làm gì?", options: ["Đi du lịch", "Thức suốt đêm lo lắng, chườm trán cho em", "Đế em tự khỏi", "Nhờ hàng xóm trông"], correct: 1 },
+                            { q: "Tình yêu thương của mẹ được so sánh với gì?", options: ["Bầu trời cao", "Biển cả bao la", "Ngọn núi cao", "Dòng sông nhỏ"], correct: 1 },
+                            { q: "Qua bài thơ, em cảm nhận về mẹ thế nào?", options: ["Mẹ rất nghiêm khắc", "Mẹ rất yêu thương và chăm sóc em tận tình", "Mẹ rất bận rộn", "Mẹ ít nói"], correct: 1 },
+                            { q: "Từ 'bao la' trong bài có nghĩa là gì?", options: ["Chật hẹp", "Rộng lớn không bờ bến", "Ngắn ngủi", "Nông cạn"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Mẹ là người chăm sóc em", right: "Từng giấc ngủ đến bữa ăn hằng ngày" },
+                                { left: "2. Khi em ốm mẹ thức", right: "Suốt đêm lo lắng" },
+                                { left: "3. Mẹ chườm trán", right: "Cho em khi em ốm" },
+                                { left: "4. Tình yêu thương của mẹ", right: "Bao la như biển cả" },
+                                { left: "5. Mẹ luôn dành cho con", right: "Những điều tốt đẹp nhất" }
+                            ],
+                            tf: [
+                                { q: "Mẹ chăm sóc em từ giấc ngủ đến bữa ăn.", ans: true },
+                                { q: "Mẹ không quan tâm khi em bị ốm.", ans: false },
+                                { q: "Khi em ốm mẹ thức suốt đêm lo lắng.", ans: true },
+                                { q: "Mẹ chườm trán cho em khi em ốm.", ans: true },
+                                { q: "Tình yêu của mẹ nhỏ bé như giọt nước.", ans: false },
+                                { q: "Tình yêu thương của mẹ bao la như biển cả.", ans: true },
+                                { q: "Em rất yêu quý mẹ của mình.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Mẹ là người chăm sóc em từng giấc [___].", answer: "ngủ" },
+                                { text: "Khi em ốm, mẹ thức suốt [___] lo lắng.", answer: "đêm" },
+                                { text: "Mẹ chườm [___] cho em khi em bị ốm.", answer: "trán" },
+                                { text: "Tình yêu thương của mẹ bao la như biển [___].", answer: "cả" },
+                                { text: "Mẹ luôn dành tình cảm [___] cho con.", answer: "lớn" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 203, name: "Bài 3", title: "Cây bàng trước sân", image: "anh6.png",
+                        paragraphs: [ "Cây bàng nhà em tỏa bóng mát rượi cả một góc sân trường và sân nhà.", "Mùa hè, lá bàng xanh mướt. Mùa thu, lá chuyển sang màu vàng óng. Bàng như người bạn thân thiết." ], 
+                        author: "(Văn học tiểu học)",
+                        vocab: "• Xanh mướt: màu xanh tươi, bóng và đẹp mắt.\n• Thân thiết: gắn bó, quý mến nhau như ruột thịt.",
+                        quiz: [
+                            { q: "Cây bàng tỏa bóng mát ở đâu?", options: ["Trong rừng sâu", "Cả một góc sân trường và sân nhà", "Trên núi cao", "Bên bờ sông"], correct: 1 },
+                            { q: "Vào mùa hè, lá bàng có màu gì?", options: ["Màu đỏ", "Màu xanh mướt", "Màu vàng", "Màu trắng"], correct: 1 },
+                            { q: "Vào mùa thu, lá bàng chuyển sang màu gì?", options: ["Màu vàng óng", "Màu xanh tươi", "Màu tím", "Màu đen"], correct: 0 },
+                            { q: "Cây bàng được so sánh như thế nào?", options: ["Như người bạn thân thiết", "Như ngôi nhà lớn", "Như ngọn tháp", "Như đám mây"], correct: 0 },
+                            { q: "Cây bàng mang lại điều gì vào những ngày nắng?", options: ["Làm bẩn sân", "Tỏa bóng mát rượi", "Làm rụng hoa", "Che ánh sáng hoàn toàn"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Cây bàng nhà em tỏa bóng mát", right: "Cả một góc sân trường và sân nhà" },
+                                { left: "2. Mùa hè lá bàng", right: "Xanh mướt" },
+                                { left: "3. Mùa thu lá chuyển sang", right: "Màu vàng óng" },
+                                { left: "4. Cây bàng giống như", right: "Người bạn thân thiết" },
+                                { left: "5. Cây bàng gắn bó với", right: "Tuổi thơ học trò" }
+                            ],
+                            tf: [
+                                { q: "Cây bàng tỏa bóng mát góc sân.", ans: true },
+                                { q: "Mùa hè lá bàng có màu đỏ rực.", ans: false },
+                                { q: "Mùa hè lá bàng xanh mướt.", ans: true },
+                                { q: "Mùa thu lá bàng chuyển sang màu vàng óng.", ans: true },
+                                { q: "Cây bàng là kẻ thù của học sinh.", ans: false },
+                                { q: "Cây bàng như người bạn thân thiết.", ans: true },
+                                { q: "Cây bàng đứng trước sân nhà và sân trường.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Cây bàng tỏa bóng [___] rượi góc sân.", answer: "mát" },
+                                { text: "Mùa hè, lá bàng xanh [___].", answer: "mướt" },
+                                { text: "Mùa thu, lá chuyển sang màu vàng [___].", answer: "óng" },
+                                { text: "Cây bàng như người bạn thân [___].", answer: "thiết" },
+                                { text: "Cây bàng đứng trước [___] nhà.", answer: "sân" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 204, name: "Bài 4", title: "Em yêu nhà em", image: "anh6.png",
+                        paragraphs: [ "Ngôi nhà nhỏ của em nằm dưới rặng dừa xanh mát rượi bóng râm.", "Ở đó có tiếng chim hót quanh vườn, có nụ cười ấm áp của ông bà và tình thương yêu của cha mẹ." ], 
+                        author: "(Tô Hà)",
+                        vocab: "• Rặng dừa: hàng cây dừa mọc nối tiếp nhau.\n• Ấm áp: cảm giác dễ chịu do tình cảm đem lại.",
+                        quiz: [
+                            { q: "Ngôi nhà nhỏ nằm ở đâu?", options: ["Dưới rặng dừa xanh mát rượi bóng râm", "Trên đỉnh núi cao", "Giữa phố thị đông đúc", "Bên bờ biển lớn"], correct: 0 },
+                            { q: "Quanh vườn có âm thanh gì?", options: ["Tiếng xe cộ", "Tiếng chim hót", "Tiếng sóng vỗ", "Tiếng đàn piano"], correct: 1 },
+                            { q: "Ở nhà có nụ cười ấm áp của ai?", options: ["Ông bà", "Thầy cô", "Bạn bè", "Hàng xóm"], correct: 0 },
+                            { q: "Ngôi nhà tràn ngập tình thương yêu của ai?", options: ["Cha mẹ", "Cô giáo", "Bạn cùng lớp", "Chú bác"], correct: 0 },
+                            { q: "Cảm xúc của tác giả đối với ngôi nhà thế nào?", options: ["Ghét bỏ", "Yêu mến và tự hào", "Bình thường", "Sợ hãi"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Ngôi nhà nhỏ của em nằm", right: "Dưới rặng dừa xanh" },
+                                { left: "2. Rặng dừa xanh mát rượi", right: "Bóng râm" },
+                                { left: "3. Quanh vườn có tiếng", right: "Chim hót" },
+                                { left: "4. Có nụ cười ấm áp của", right: "Ông bà" },
+                                { left: "5. Có tình thương yêu của", right: "Cha mẹ" }
+                            ],
+                            tf: [
+                                { q: "Ngôi nhà nằm dưới rặng dừa xanh.", ans: true },
+                                { q: "Ngôi nhà nằm trên đỉnh núi cao.", ans: false },
+                                { q: "Quanh vườn có tiếng chim hót.", ans: true },
+                                { q: "Ở nhà có nụ cười ấm áp của ông bà.", ans: true },
+                                { q: "Cha mẹ không yêu thương em.", ans: false },
+                                { q: "Ngôi nhà tràn ngập tình thương yêu.", ans: true },
+                                { q: "Tác giả rất yêu quý ngôi nhà của mình.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Ngôi nhà nhỏ nằm dưới rặng [___] xanh.", answer: "dừa" },
+                                { text: "Quanh vườn có tiếng chim [___] quanh.", answer: "hót" },
+                                { text: "Có nụ cười ấm [___] của ông bà.", answer: "áp" },
+                                { text: "Có tình thương yêu của cha [___].", answer: "mẹ" },
+                                { text: "Em rất yêu ngôi nhà [___] của mình.", answer: "nhỏ" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 205, name: "Bài 5", title: "Giúp mẹ việc nhà", image: "anh6.png",
+                        paragraphs: [ "Sau giờ học về nhà, em thường cất dép gọn gàng, quét nhà sạch sẽ và nhặt rau giúp mẹ.", "Mẹ xoa đầu khen em là đứa con ngoan ngoãn và biết vâng lời." ], 
+                        author: "(Kỹ năng sống)",
+                        vocab: "• Ngoan ngoãn: biết nghe lời người lớn, cư xử lễ phép.\n• Gọn gàng: ngăn nắp, đâu ra đấy.",
+                        quiz: [
+                            { q: "Em thường làm gì sau giờ học về nhà?", options: ["Đi chơi ngay", "Cất dép gọn gàng, quét nhà, nhặt rau giúp mẹ", "Xem ti vi suốt buổi", "Đi ngủ luôn"], correct: 1 },
+                            { q: "Mẹ đã làm gì khi thấy em giúp việc nhà?", options: ["Mắng phạt", "Xoa đầu khen ngợi", "Không quan tâm", "Nhờ làm thêm việc khác"], correct: 1 },
+                            { q: "Mẹ khen em là đứa con thế nào?", options: ["Lười biếng", "Ngoan ngoãn và biết vâng lời", "Hư hỏng", "Bướng bỉnh"], correct: 1 },
+                            { q: "Hành động của em thể hiện điều gì?", options: ["Biết yêu thương và giúp đỡ gia đình", "Sợ mẹ mắng", "Muốn được thưởng quà", "Làm cho có lệ"], correct: 0 },
+                            { q: "Từ 'gọn gàng' trong bài chỉ điều gì?", options: ["Bừa bộn", "Ngăn nắp, đâu ra đấy", "Bẩn thỉu", "Chật chội"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Sau giờ học về nhà em thường", right: "Cất dép gọn gàng" },
+                                { left: "2. Em quét nhà", right: "Sạch sẽ" },
+                                { left: "3. Em nhặt rau", right: "Giúp mẹ" },
+                                { left: "4. Mẹ xoa đầu", right: "Khen ngợi em" },
+                                { left: "5. Em là đứa con", right: "Ngoan ngoãn, biết vâng lời" }
+                            ],
+                            tf: [
+                                { q: "Sau giờ học em đi chơi ngay không về nhà.", ans: false },
+                                { q: "Em cất dép gọn gàng khi về nhà.", ans: true },
+                                { q: "Em quét nhà sạch sẽ giúp mẹ.", ans: true },
+                                { q: "Em biết nhặt rau giúp mẹ.", ans: true },
+                                { q: "Mẹ mắng khi em làm việc nhà.", ans: false },
+                                { q: "Mẹ xoa đầu khen ngợi em.", ans: true },
+                                { q: "Em là đứa con ngoan ngoãn, vâng lời.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Sau giờ học về nhà, em cất dép gọn [___].", answer: "gàng" },
+                                { text: "Em quét nhà sạch [___] giúp mẹ.", answer: "sẽ" },
+                                { text: "Em nhặt rau giúp [___].", answer: "mẹ" },
+                                { text: "Mẹ xoa đầu khen em là con ngoan [___].", answer: "ngoãn" },
+                                { text: "Em là đứa trẻ biết [___] lời.", answer: "vâng" }
+                            ]
+                        }
+                    }
+                ]
+            },
+            3: {
+                title: "Chủ đề 3: Bài học từ cuộc sống",
+                lessons: [
+                    { 
+                        id: 301, name: "Bài 1", title: "Qua đường an toàn", image: "anh6.png",
+                        paragraphs: [ "Khi đi qua đường phố đông đúc, em nhớ đi cùng người lớn và quan sát kỹ.", "Nhìn đèn tín hiệu giao thông và đi vào vạch qua đường dành cho người đi bộ để đảm bảo an toàn." ], 
+                        author: "(An toàn giao thông)",
+                        vocab: "• Đèn tín hiệu: đèn điều khiển giao thông.\n• An toàn: tránh được mọi nguy hiểm.",
+                        quiz: [
+                            { q: "Khi đi qua đường phố đông đúc, em nên đi với ai?", options: ["Đi một mình", "Đi cùng người lớn", "Đi với bạn nhỏ", "Đi với người lạ"], correct: 1 },
+                            { q: "Khi qua đường cần phải làm gì?", options: ["Nhắm mắt chạy qua", "Quan sát kỹ", "Vừa đi vừa đùa giỡn", "Đứng giữa đường"], correct: 1 },
+                            { q: "Chúng ta cần nhìn gì khi qua đường?", options: ["Đèn tín hiệu giao thông", "Cây xanh", "Mây trên trời", "Cửa hàng bên đường"], correct: 0 },
+                            { q: "Nên đi vào phần đường nào dành cho người đi bộ?", options: ["Lòng đường xe chạy", "Vạch qua đường", "Vỉa hè", "Dải phân cách"], correct: 1 },
+                            { q: "Việc làm đó nhằm mục đích gì?", options: ["Để chơi đùa", "Đảm bảo an toàn", "Để đi nhanh hơn", "Để ngắm cảnh"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Khi đi qua đường phố đông đúc", right: "Nhớ đi cùng người lớn" },
+                                { left: "2. Em nhớ quan sát", right: "Thật kỹ" },
+                                { left: "3. Nhìn đèn tín hiệu", right: "Giao thông" },
+                                { left: "4. Đi vào vạch qua đường", right: "Dành cho người đi bộ" },
+                                { left: "5. Để đảm bảo", right: "An toàn" }
+                            ],
+                            tf: [
+                                { q: "Khi qua đường phố đông đúc nên đi một mình.", ans: false },
+                                { q: "Nên đi cùng người lớn khi qua đường.", ans: true },
+                                { q: "Cần quan sát kỹ trước khi qua đường.", ans: true },
+                                { q: "Không cần nhìn đèn tín hiệu giao thông.", ans: false },
+                                { q: "Cần nhìn đèn tín hiệu giao thông.", ans: true },
+                                { q: "Nên đi vào vạch dành cho người đi bộ.", ans: true },
+                                { q: "Tuân thủ luật lệ giúp đảm bảo an toàn.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Khi đi qua đường phố đông đúc, hãy đi cùng người [___].", answer: "lớn" },
+                                { text: "Em nhớ quan sát thật [___].", answer: "kỹ" },
+                                { text: "Nhìn đèn tín hiệu giao [___].", answer: "thông" },
+                                { text: "Đi vào vạch qua đường dành cho người đi [___].", answer: "bộ" },
+                                { text: "Tuân thủ quy tắc để đảm bảo an [___].", answer: "toàn" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 302, name: "Bài 2", title: "Cây táo ngoan", image: "anh6.png",
+                        paragraphs: [ "Cây táo đứng giữa vườn chắt chiu từng giọt nước và ánh nắng ấm áp.", "Cây cho ra những quả táo chín đỏ mọng thơm ngon, dâng hiến trọn vẹn cho các em nhỏ ngoan ngoãn." ], 
+                        author: "(Võ Thanh An)",
+                        vocab: "• Chắt chiu: dành dụm, gom góp từng chút một.\n• Đỏ mọng: quả chín đỏ và căng đầy nước bên trong.",
+                        quiz: [
+                            { q: "Cây táo đứng ở đâu trong vườn?", options: ["Ở góc vườn", "Đứng giữa vườn", "Ngoài cổng vườn", "Sâu trong rừng"], correct: 1 },
+                            { q: "Cây táo đã chắt chiu những gì?", options: ["Từng giọt nước và ánh nắng ấm áp", "Phân bón và đất", "Lá cây và hoa", "Gió và mây"], correct: 0 },
+                            { q: "Cây táo cho ra những quả như thế nào?", options: ["Quả xanh chát", "Quả táo chín đỏ mọng thơm ngon", "Quả nhỏ xíu", "Quả héo úa"], correct: 1 },
+                            { q: "Cây táo dâng hiến quả cho ai?", options: ["Cho chim chóc", "Cho các em nhỏ ngoan ngoãn", "Cho người lớn", "Cho bác làm vườn"], correct: 1 },
+                            { q: "Hình ảnh cây táo trong bài thể hiện điều gì?", options: ["Sự ích kỷ", "Tấm lòng bao dung, dâng hiến", "Sự giận hờn", "Sự lười biếng"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Cây táo đứng", right: "Giữa vườn" },
+                                { left: "2. Cây chắt chiu từng giọt nước", right: "Và ánh nắng ấm áp" },
+                                { left: "3. Cây cho ra những quả táo", right: "Chín đỏ mọng thơm ngon" },
+                                { left: "4. Cây dâng hiến trọn vẹn", right: "Cho các em nhỏ" },
+                                { left: "5. Các em nhỏ được nhận quà", right: "Phải là em ngoan ngoãn" }
+                            ],
+                            tf: [
+                                { q: "Cây táo đứng ở góc vườn nhà.", ans: false },
+                                { q: "Cây táo đứng giữa vườn.", ans: true },
+                                { q: "Cây chắt chiu nước và ánh nắng.", ans: true },
+                                { q: "Cây cho quả táo chín đỏ mọng.", ans: true },
+                                { q: "Cây giữ lại quả ăn một mình không cho ai.", ans: false },
+                                { q: "Cây dâng hiến quả cho các em nhỏ ngoan.", ans: true },
+                                { q: "Cây táo rất tốt bụng và rộng lượng.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Cây táo đứng giữa [___].", answer: "vườn" },
+                                { text: "Cây chắt chiu từng giọt nước và ánh nắng ấm [___].", answer: "áp" },
+                                { text: "Cây cho ra những quả táo chín đỏ [___].", answer: "mọng" },
+                                { text: "Cây dâng hiến trọn vẹn cho các em [___].", answer: "nhỏ" },
+                                { text: "Dành tặng những em nhỏ ngoan [___].", answer: "ngoãn" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 303, name: "Bài 3", title: "Điểm mười đầu tiên", image: "anh6.png",
+                        paragraphs: [ "Hôm nay Nam nhận điểm 10 môn Toán đầu tiên trong đời học sinh tiểu học.", "Nam khoe với mẹ bằng nụ cười rạng rỡ. Mẹ ôm Nam vào lòng và khen con trai đã rất chăm chỉ." ], 
+                        author: "(Truyện ngắn)",
+                        vocab: "• Rạng rỡ: tươi vui, sáng ngời trên khuôn mặt.\n• Chăm chỉ: kiên trì làm việc hoặc học tập không mệt mỏi.",
+                        quiz: [
+                            { q: "Nam nhận điểm 10 môn gì đầu tiên?", options: ["Môn Tiếng Việt", "Môn Toán", "Môn Tự nhiên xã hội", "Môn Đạo đức"], correct: 1 },
+                            { q: "Đó là điểm 10 vào thời điểm nào trong đời học sinh?", options: ["Điểm 10 đầu tiên", "Điểm 10 cuối năm", "Điểm 10 kiểm tra học kỳ", "Điểm 10 thi tốt nghiệp"], correct: 0 },
+                            { q: "Nam khoe với mẹ bằng vẻ mặt thế nào?", options: ["Buồn rầu", "Nụ cười rạng rỡ", "Lo lắng", "Sợ hãi"], correct: 1 },
+                            { q: "Mẹ đã làm gì khi Nam khoe điểm 10?", options: ["Mắng mỏ", "Ôm Nam vào lòng và khen chăm chỉ", "Không nói gì", "Bắt học tiếp"], correct: 1 },
+                            { q: "Thành quả đó đến từ đức tính gì của Nam?", options: ["Sự lười biếng", "Sự chăm chỉ", "Sự may mắn", "Sự chủ quan"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Hôm nay Nam nhận điểm 10", right: "Môn Toán đầu tiên" },
+                                { left: "2. Đó là điểm 10 đầu tiên trong đời", right: "Học sinh tiểu học" },
+                                { left: "3. Nam khoe với mẹ bằng", right: "Nụ cười rạng rỡ" },
+                                { left: "4. Mẹ ôm Nam", right: "Vào lòng" },
+                                { left: "5. Mẹ khen con trai đã rất", right: "Chăm chỉ" }
+                            ],
+                            tf: [
+                                { q: "Nam nhận điểm 10 môn Tiếng Việt.", ans: false },
+                                { q: "Nam nhận điểm 10 môn Toán.", ans: true },
+                                { q: "Đó là điểm 10 đầu tiên trong đời tiểu học.", ans: true },
+                                { q: "Nam khóc lóc khi nhận điểm 10.", ans: false },
+                                { q: "Nam khoe mẹ bằng nụ cười rạng rỡ.", ans: true },
+                                { q: "Mẹ ôm Nam vào lòng vui sướng.", ans: true },
+                                { q: "Mẹ khen Nam rất chăm chỉ.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Nam nhận điểm 10 môn [___] đầu tiên.", answer: "Toán" },
+                                { text: "Nam khoe với mẹ bằng nụ cười rạng [___].", answer: "rỡ" },
+                                { text: "Mẹ ôm Nam vào [___].", answer: "lòng" },
+                                { text: "Mẹ khen con trai đã rất chăm [___].", answer: "chỉ" },
+                                { text: "Điểm 10 đầu tiên trong đời học [___].", answer: "sinh" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 304, name: "Bài 4", title: "Làm anh thật khó", image: "anh6.png",
+                        paragraphs: [ "Làm anh thật khó nhưng cũng thật vui vẻ và đáng tự hào.", "Khi em bé khóc, anh phải dỗ dành. Khi có đồ chơi đẹp, anh phải nhường cho em. Làm anh là biết yêu thương." ], 
+                        author: "(Phạm Thị Ngọc Liên)",
+                        vocab: "• Dỗ dành: nói lời ngọt ngào hoặc hành động để em vui, nín khóc.\n• Nhường: nhường phần hơn hoặc đồ vật cho người khác.",
+                        quiz: [
+                            { q: "Làm anh được tác giả nhận xét thế nào?", options: ["Rất dễ dàng", "Thật khó nhưng cũng thật vui vẻ", "Rất buồn chán", "Không có gì thú vị"], correct: 1 },
+                            { q: "Khi em bé khóc, người anh phải làm gì?", options: ["Đánh em", "Dỗ dành em", "Bỏ đi chơi chỗ khác", "Khóc cùng em"], correct: 1 },
+                            { q: "Khi có đồ chơi đẹp, anh phải làm gì với em?", options: ["Giấu đi", "Nhường cho em", "Đập phá", "Đòi giữ lại hết"], correct: 1 },
+                            { q: "Làm anh thực chất là biết điều gì?", options: ["Biết đòi hỏi", "Biết yêu thương", "Biết tranh giành", "Biết bắt nạt"], correct: 1 },
+                            { q: "Qua bài thơ, em học được thái độ gì với em nhỏ?", options: ["Biết nhường nhịn và yêu thương", "Phải tranh giành đồ chơi", "Không cần quan tâm", "Hay hờn dỗi"], correct: 0 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Làm anh thật khó nhưng cũng", right: "Thật vui vẻ và đáng tự hào" },
+                                { left: "2. Khi em bé khóc", right: "Anh phải dỗ dành" },
+                                { left: "3. Khi có đồ chơi đẹp", right: "Anh phải nhường cho em" },
+                                { left: "4. Làm anh là biết", right: "Yêu thương" },
+                                { left: "5. Người anh luôn làm gương", right: "Cho em nhỏ" }
+                            ],
+                            tf: [
+                                { q: "Làm anh là việc rất dễ dàng.", ans: false },
+                                { q: "Làm anh thật khó nhưng cũng rất vui.", ans: true },
+                                { q: "Khi em khóc, anh phải dỗ dành.", ans: true },
+                                { q: "Khi có đồ chơi đẹp, anh phải giữ lấy riêng mình.", ans: false },
+                                { q: "Anh phải nhường đồ chơi đẹp cho em.", ans: true },
+                                { q: "Làm anh là biết yêu thương em nhỏ.", ans: true },
+                                { q: "Bài thơ dạy chúng ta tình cảm anh em hòa thuận.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Làm anh thật khó nhưng cũng thật [___].", answer: "vui" },
+                                { text: "Khi em bé khóc, anh phải dỗ [___].", answer: "dành" },
+                                { text: "Khi có đồ chơi đẹp, anh phải nhường cho [___].", answer: "em" },
+                                { text: "Làm anh là biết yêu [___].", answer: "thương" },
+                                { text: "Làm anh rất đáng tự [___].", answer: "hào" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 305, name: "Bài 5", title: "Bà cụ và chú chó nhỏ", image: "anh6.png",
+                        paragraphs: [ "Bà cụ nghèo chia sẻ mẩu bánh mì ít ỏi của mình cho chú chó hoang tội nghiệp.", "Từ hôm đó, chú chó luôn quấn quýt bên bà, canh giữ nhà và sủa vang khi có người lạ đến gần." ], 
+                        author: "(Truyện ngụ ngôn ý nghĩa)",
+                        vocab: "• Ít ỏi: số lượng rất ít, không đáng kể.\n• Quấn quýt: ở bên cạnh luôn không rời, biểu lộ sự gắn bó.",
+                        quiz: [
+                            { q: "Bà cụ trong câu chuyện có hoàn cảnh thế nào?", options: ["Rất giàu có", "Bà cụ nghèo", "Bình thường", "Sống tha phương"], correct: 1 },
+                            { q: "Bà cụ đã chia sẻ thứ gì cho chú chó hoang?", options: ["Bát cơm đầy", "Mẩu bánh mì ít ỏi", "Khúc xương to", "Miếng thịt ngon"], correct: 1 },
+                            { q: "Chú chó hoang có thái độ thế nào sau đó?", options: ["Bỏ đi mất", "Luôn quấn quýt bên bà", "Cắn bà cụ", "Sủa gắtใส่ bà"], correct: 1 },
+                            { q: "Chú chó đã làm gì để bảo vệ bà cụ?", options: ["Đi bắt chuột", "Canh giữ nhà và sủa vang khi có người lạ", "Đi kiếm tiền", "Trồng cây giúp bà"], correct: 1 },
+                            { q: "Câu chuyện ca ngợi điều gì ở nhân vật?", options: ["Sự ích kỷ", "Lòng nhân ái và sự đền ơn đáp nghĩa", "Sự giàu có", "Sự lạnh lùng"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Bà cụ nghèo chia sẻ mẩu bánh mì", right: "Ít ỏi của mình" },
+                                { left: "2. Chia sẻ cho chú chó hoang", right: "Tội nghiệp" },
+                                { left: "3. Từ hôm đó chú chó luôn", right: "Quấn quýt bên bà" },
+                                { left: "4. Chú chó giúp bà cụ", right: "Canh giữ nhà" },
+                                { left: "5. Chú sủa vang khi có", right: "Người lạ đến gần" }
+                            ],
+                            tf: [
+                                { q: "Bà cụ trong truyện rất giàu có.", ans: false },
+                                { q: "Bà cụ có hoàn cảnh nghèo khó.", ans: true },
+                                { q: "Bà chia sẻ bánh mì cho chú chó hoang.", ans: true },
+                                { q: "Chú chó hoang cắn bà cụ khi được cho ăn.", ans: false },
+                                { q: "Chú chó luôn quấn quýt bên bà cụ.", ans: true },
+                                { q: "Chú chó giúp canh giữ nhà cửa.", ans: true },
+                                { q: "Câu chuyện ca ngợi lòng nhân ái.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Bà cụ nghèo chia sẻ mẩu bánh [___] ít ỏi.", answer: "mì" },
+                                { text: "Chia sẻ cho chú chó hoang tội [___].", answer: "nghiệp" },
+                                { text: "Chú chó luôn quấn quýt bên [___].", answer: "bà" },
+                                { text: "Chú chó canh giữ [___] cho bà.", answer: "nhà" },
+                                { text: "Chú sủa vang khi có người [___] đến gần.", answer: "lạ" }
+                            ]
+                        }
+                    }
+                ]
+            },
+            4: {
+                title: "Chủ đề 4: Thiên nhiên kì thú",
+                lessons: [
+                    { 
+                        id: 401, name: "Bài 1", title: "Buổi sáng ở bản", image: "anh6.png",
+                        paragraphs: [ "Sương mù lảng vảng trên những đỉnh núi cao vút của bản làng.", "Gà trống cất tiếng gáy vang báo hiệu ngày mới bắt đầu. Các bạn nhỏ xúng xính váy áo rực rỡ theo mẹ lên nương rẫy." ], 
+                        author: "(Miền cao xanh)",
+                        vocab: "• Xúng xính: mặc quần áo đẹp, rộng rãi và gọn gàng.\n• Nương rẫy: khu đất trồng trọt trên đồi núi.",
+                        quiz: [
+                            { q: "Hiện tượng gì lảng vảng trên đỉnh núi cao?", options: ["Mây đen", "Sương mù", "Khói bếp", "Ánh nắng"], correct: 1 },
+                            { q: "Con vật nào cất tiếng gáy vang báo hiệu ngày mới?", options: ["Con chó", "Gà trống", "Con vịt", "Chim bồ câu"], correct: 1 },
+                            { q: "Các bạn nhỏ mặc váy áo thế nào?", options: ["Xúng xính rực rỡ", "Rách rưới", "Đơn giản", "Bình thường"], correct: 0 },
+                            { q: "Các bạn nhỏ theo mẹ đi đâu?", options: ["Đi chợ phiên", "Lên nương rẫy", "Đi học chữ", "Đi thăm họ hàng"], correct: 1 },
+                            { q: "Khung cảnh buổi sáng ở bản làng gợi lên điều gì?", options: ["Buồn tẻ", "Tươi vui, bình yên và tràn đầy sức sống", "Náo nhiệt phố thị", "Lạnh lẽo"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Sương mù lảng vảng trên", right: "Những đỉnh núi cao vút" },
+                                { left: "2. Gà trống cất tiếng gáy vang", right: "Báo hiệu ngày mới bắt đầu" },
+                                { left: "3. Các bạn nhỏ mặc váy áo", right: "Xúng xính rực rỡ" },
+                                { left: "4. Các bạn nhỏ theo mẹ", right: "Lên nương rẫy" },
+                                { left: "5. Bản làng vào buổi sáng", right: "Thật thanh bình" }
+                            ],
+                            tf: [
+                                { q: "Sương mù lảng vảng trên đỉnh núi.", ans: true },
+                                { q: "Trời buổi sáng ở bản có tuyết rơi.", ans: false },
+                                { q: "Gà trống gáy vang báo hiệu ngày mới.", ans: true },
+                                { q: "Các bạn nhỏ mặc váy áo xúng xính.", ans: true },
+                                { q: "Các bạn nhỏ theo bố đi đá bóng.", ans: false },
+                                { q: "Các bạn nhỏ theo mẹ lên nương rẫy.", ans: true },
+                                { q: "Khung cảnh buổi sáng rất sinh động.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Sương mù lảng vảng trên những đỉnh [___] cao vút.", answer: "núi" },
+                                { text: "Gà trống cất tiếng gáy [___] báo hiệu ngày mới.", answer: "vang" },
+                                { text: "Các bạn nhỏ xúng xính váy [___] rực rỡ.", answer: "áo" },
+                                { text: "Các bạn nhỏ theo mẹ lên nương [___].", answer: "rẫy" },
+                                { text: "Bản làng chìm trong sương [___].", answer: "mù" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 402, name: "Bài 2", title: "Mưa xuân", image: "anh6.png",
+                        paragraphs: [ "Những hạt mưa xuân lất phất bay như những sợi tơ mỏng tang rơi xuống vạn vật.", "Cây cối đâm chồi nảy lộc, khoác lên mình tấm áo xanh tươi mới và tràn đầy sức sống." ], 
+                        author: "(Nguyễn Bao)",
+                        vocab: "• Lất phất: mưa nhỏ, hạt nhẹ bay bay trong gió.\n• Đâm chồi nảy lộc: cây cối ra mầm non vào mùa xuân.",
+                        quiz: [
+                            { q: "Những hạt mưa xuân rơi như thế nào?", options: ["Như thác nước đổ", "Như những sợi tơ mỏng tang", "Như đá cục", "Như trận bão lớn"], correct: 1 },
+                            { q: "Mưa xuân rơi xuống đâu?", options: ["Xuống vạn vật", "Xuống mái nhà", "Xuống dòng sông sâu", "Xuống đường phố"], correct: 0 },
+                            { q: "Cây cối trong mùa xuân có hiện tượng gì?", options: ["Héo úa", "Đâm chồi nảy lộc", "Rụng hết lá", "Chết khô"], correct: 1 },
+                            { q: "Cây cối khoác lên mình tấm áo gì?", options: ["Áo màu vàng", "Tấm áo xanh tươi mới tràn đầy sức sống", "Áo màu đỏ", "Áo màu nâu"], correct: 1 },
+                            { q: "Mùa xuân mang lại sức sống thế nào cho thiên nhiên?", options: ["Tươi mới, tràn đầy sức sống", "U ám, buồn bã", "Khô cằn", "Lạnh giá"], correct: 0 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Những hạt mưa xuân", right: "Lất phất bay" },
+                                { left: "2. Hạt mưa rơi như", right: "Những sợi tơ mỏng tang" },
+                                { left: "3. Mưa xuân rơi xuống", right: "Vạn vật" },
+                                { left: "4. Cây cối đâm chồi", right: "Nảy lộc" },
+                                { left: "5. Cây cối khoác lên mình", right: "Tấm áo xanh tươi mới" }
+                            ],
+                            tf: [
+                                { q: "Mưa xuân rơi nặng hạt như bão.", ans: false },
+                                { q: "Hạt mưa xuân lất phất bay.", ans: true },
+                                { q: "Mưa rơi như những sợi tơ mỏng tang.", ans: true },
+                                { q: "Mưa xuân làm vạn vật tươi tắn.", ans: true },
+                                { q: "Cây cối héo rũ trong mưa xuân.", ans: false },
+                                { q: "Cây cối đâm chồi nảy lộc.", ans: true },
+                                { q: "Thiên nhiên tràn đầy sức sống mùa xuân.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Những hạt mưa xuân lất phất [___].", answer: "bay" },
+                                { text: "Mưa rơi như những sợi tơ mỏng [___].", answer: "tang" },
+                                { text: "Cây cối đâm chồi nảy [___].", answer: "lộc" },
+                                { text: "Cây cối khoác lên mình tấm áo [___] tươi.", answer: "xanh" },
+                                { text: "Mưa xuân đem lại sức sống [___] mới.", answer: "tràn" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 403, name: "Bài 3", title: "Bầu trời mùa thu", image: "anh6.png",
+                        paragraphs: [ "Bầu trời mùa thu cao trong vắt và xanh ngắt một màu bình yên.", "Đàn chim én chao lượn trên không trung rồi chuẩn bị bay về phương nam tránh rét khi đông tới." ], 
+                        author: "(Thiên nhiên đất nước)",
+                        vocab: "• Trong vắt: sạch và sáng đến mức nhìn xuyên qua được.\n• Chao lượn: bay lượn vòng qua vòng lại trên không.",
+                        quiz: [
+                            { q: "Bầu trời mùa thu có đặc điểm gì?", options: ["Xám xịt mây mưa", "Cao trong vắt và xanh ngắt một màu bình yên", "Đỏ rực hoàng hôn", "Đầy sương mù"], correct: 1 },
+                            { q: "Con vật nào bay lượn trên không trung?", options: ["Đàn chim én", "Đàn vịt trời", "Đàn gà rừng", "Đàn dơi"], correct: 0 },
+                            { q: "Đàn chim én chuẩn bị bay về đâu?", options: ["Về phương bắc", "Về phương nam tránh rét", "Về tổ nghỉ ngơi", "Lên núi cao"], correct: 1 },
+                            { q: "Chim én bay về phương nam khi mùa nào tới?", options: ["Mùa xuân", "Mùa hè", "Mùa đông tới", "Mùa thu"], correct: 2 },
+                            { q: "Bức tranh thiên nhiên mùa thu gợi cảm giác gì?", options: ["Buồn tủi", "Bình yên và thơ mộng", "Sợ hãi", "Nặng nề"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Bầu trời mùa thu cao", right: "Trong vắt" },
+                                { left: "2. Trời xanh ngắt một màu", right: "Bình yên" },
+                                { left: "3. Đàn chim én chao lượn", right: "Trên không trung" },
+                                { left: "4. Chim én chuẩn bị bay về", right: "Phương nam tránh rét" },
+                                { left: "5. Chim én bay đi khi", right: "Đông tới" }
+                            ],
+                            tf: [
+                                { q: "Bầu trời mùa thu xám xịt mây đen.", ans: false },
+                                { q: "Bầu trời mùa thu cao trong vắt.", ans: true },
+                                { q: "Bầu trời xanh ngắt một màu bình yên.", ans: true },
+                                { q: "Đàn chim én chao lượn trên không trung.", ans: true },
+                                { q: "Chim én bay về phương bắc tránh rét.", ans: false },
+                                { q: "Chim én bay về phương nam tránh rét.", ans: true },
+                                { q: "Hiện tượng đó xảy ra khi đông tới.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Bầu trời mùa thu cao trong [___].", answer: "vắt" },
+                                { text: "Trời xanh ngắt một màu bình [___].", answer: "yên" },
+                                { text: "Đàn chim én chao [___] trên không trung.", answer: "lượn" },
+                                { text: "Chim én bay về phương nam tránh [___].", answer: "rét" },
+                                { text: "Bay về phương nam khi đông [___].", answer: "tới" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 404, name: "Bài 4", title: "Sóng biển", image: "anh6.png",
+                        paragraphs: [ "Sóng biển hiền hòa vỗ vào bờ cát trắng mịn màng suốt ngày đêm.", "Dưới ánh nắng vàng rực rỡ, mặt biển lấp lánh như được rải một lớp kim sa bạc tỉ mỉ vô cùng đẹp mắt." ], 
+                        author: "(Hải đảo quê hương)",
+                        vocab: "• Hiền hòa: nhẹ nhàng, không dữ dội.\n• Lấp lánh: ánh sáng phản chiếu lóe lên rồi tắt liên tục.",
+                        quiz: [
+                            { q: "Sóng biển được miêu tả có tính chất gì?", options: ["Dữ dội, gầm rú", "Hiền hòa vỗ vào bờ cát trắng mịn màng", "Lặng im", "Đen ngòm"], correct: 1 },
+                            { q: "Sóng biển vỗ vào đâu suốt ngày đêm?", options: ["Vách đá ngầm", "Bờ cát trắng mịn màng", "Thuyền bè", "Rừng cây"], correct: 1 },
+                            { q: "Dưới ánh nắng vàng rực rỡ, mặt biển thế nào?", options: ["Tối đen", "Lấp lánh như được rải lớp kim sa bạc", "Đục ngầu", "Phủ sương mù"], correct: 1 },
+                            { q: "Cảnh sắc mặt biển lúc nắng lên trông thế nào?", options: ["Đáng sợ", "Vô cùng đẹp mắt", "Xấu xí", "Bình thường"], correct: 1 },
+                            { q: "Đoạn văn viết về chủ đề gì?", options: ["Vùng núi cao", "Hải đảo quê hương và sóng biển", "Sa mạc khô cằn", "Sông ngòi miền Tây"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Sóng biển hiền hòa vỗ vào", right: "Bờ cát trắng mịn màng" },
+                                { left: "2. Sóng vỗ bờ cát suốt", right: "Ngày đêm" },
+                                { left: "3. Dưới ánh nắng vàng rực rỡ", right: "Mặt biển lấp lánh" },
+                                { left: "4. Mặt biển giống như được rải", right: "Một lớp kim sa bạc" },
+                                { left: "5. Khung cảnh biển vô cùng", right: "Đẹp mắt" }
+                            ],
+                            tf: [
+                                { q: "Sóng biển dữ dội gầm rú suốt ngày đêm.", ans: false },
+                                { q: "Sóng biển hiền hòa vỗ bờ cát.", ans: true },
+                                { q: "Bờ cát biển có màu trắng mịn màng.", ans: true },
+                                { q: "Sóng vỗ vào bờ cát suốt ngày đêm.", ans: true },
+                                { q: "Mặt biển tối thui dưới ánh nắng.", ans: false },
+                                { q: "Mặt biển lấp lánh dưới ánh nắng vàng.", ans: true },
+                                { q: "Cảnh biển vô cùng đẹp mắt.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Sóng biển hiền hòa vỗ vào bờ cát [___].", answer: "trắng" },
+                                { text: "Sóng vỗ vào bờ cát suốt ngày [___].", answer: "đêm" },
+                                { text: "Dưới ánh nắng vàng rực rỡ, mặt biển lấp [___].", answer: "lánh" },
+                                { text: "Mặt biển như được rải một lớp kim sa [___].", answer: "bạc" },
+                                { text: "Khung cảnh biển vô cùng đẹp [___].", answer: "mắt" }
+                            ]
+                        }
+                    },
+                    { 
+                        id: 405, name: "Bài 5", title: "Khu rừng xanh", image: "anh6.png",
+                        paragraphs: [ "Khu rừng rộng lớn là ngôi nhà chung của muôn loài cây cổ thụ to lớn.", "Những chú sóc tinh nghịch và hàng ngàn loài chim ca hát líu lo suốt bốn mùa hoa nở rực rỡ." ], 
+                        author: "(Sinh thái học)",
+                        vocab: "• Cổ thụ: cây lâu năm thân to lớn.\n• Líu lo: tiếng chim hót vui tai, rộn rã.",
+                        quiz: [
+                            { q: "Khu rừng rộng lớn là gì của muôn loài?", options: ["Nơi giấu thức ăn", "Ngôi nhà chung", "Trường học", "Khu vui chơi"], correct: 1 },
+                            { q: "Trong rừng có những loài cây gì to lớn?", options: ["Cây hoa ngắn ngày", "Cây cổ thụ to lớn", "Cây dây leo nhỏ", "Cây bụi thấp"], correct: 1 },
+                            { q: "Những chú sóc trong rừng có tính cách gì?", options: ["Buồn bã", "Tinh nghịch", "Dữ tợn", "Lười biếng"], correct: 1 },
+                            { q: "Loài vật nào ca hát líu lo suốt bốn mùa?", options: ["Hàng ngàn loài chim", "Muông thú", "Côn trùng", "Ếch nhái"], correct: 0 },
+                            { q: "Khung cảnh khu rừng ra sao qua các mùa hoa?", options: ["Héo úa", "Nở rực rỡ", "Ngập tuyết", "Khô hạn"], correct: 1 }
+                        ],
+                        practice: {
+                            match: [
+                                { left: "1. Khu rừng rộng lớn là", right: "Ngôi nhà chung của muôn loài" },
+                                { left: "2. Trong rừng có cây", right: "Cổ thụ to lớn" },
+                                { left: "3. Những chú sóc", right: "Tinh nghịch" },
+                                { left: "4. Hàng ngàn loài chim ca hát", right: "Líu lo suốt bốn mùa" },
+                                { left: "5. Khung cảnh hoa nở", right: "Rực rỡ" }
+                            ],
+                            tf: [
+                                { q: "Khu rừng rộng lớn là ngôi nhà chung.", ans: true },
+                                { q: "Trong rừng chỉ có cỏ dại nhỏ bé.", ans: false },
+                                { q: "Trong rừng có cây cổ thụ to lớn.", ans: true },
+                                { q: "Những chú sóc rất tinh nghịch.", ans: true },
+                                { q: "Chim chóc không bao giờ hót trong rừng.", ans: false },
+                                { q: "Hàng ngàn loài chim ca hát líu lo.", ans: true },
+                                { q: "Hoa trong rừng nở rực rỡ suốt bốn mùa.", ans: true }
+                            ],
+                            fill: [
+                                { text: "Khu rừng rộng lớn là ngôi nhà [___] của muôn loài.", answer: "chung" },
+                                { text: "Trong rừng có những cây cổ thụ to [___].", answer: "lớn" },
+                                { text: "Những chú sóc tinh [___] chạy nhảy.", answer: "nghịch" },
+                                { text: "Hàng ngàn loài chim ca hát líu [___].", answer: "lo" },
+                                { text: "Hoa nở rực [___] khắp khu rừng.", answer: "rỡ" }
+                            ]
+                        }
+                    }
+                ]
+            }
+        };
+
+        let currentTopicId = null;
+        let currentLesson = null;
+        let currentSentenceIndex = 0;
+        let activeTimer = null;
+        let sampleReadingIndex = 0; 
+        let isPaused = false;
+
+        let sentenceActiveTimer = null;
+        let sentenceReadingIndex = 0;
+        let isSentencePaused = false;
+        let recognition = null;
+        let globalSpokenTranscript = "";
+
+        let currentQuizIndex = 0;
+        let userQuizAnswers = {};
+
+        function hideAllScreens() {
+            stopAudio();
+            document.getElementById('cover-screen').classList.add('hidden');
+            document.getElementById('topic-screen').classList.add('hidden');
+            document.getElementById('lesson-list-screen').classList.add('hidden');
+            document.getElementById('step-sample-screen').classList.add('hidden');
+            document.getElementById('step-reading-content-screen').classList.add('hidden');
+            document.getElementById('step-sentence-screen').classList.add('hidden');
+            document.getElementById('step-fullread-screen').classList.add('hidden');
+            document.getElementById('step-quiz-screen').classList.add('hidden');
+            document.getElementById('step-practice-screen').classList.add('hidden');
+            document.getElementById('step-done-screen').classList.add('hidden');
+        }
+
+        function goToCover() { hideAllScreens(); document.getElementById('cover-screen').classList.remove('hidden'); }
+        function goToTopics() { hideAllScreens(); document.getElementById('topic-screen').classList.remove('hidden'); }
+        function goBackToList() { hideAllScreens(); document.getElementById('lesson-list-screen').classList.remove('hidden'); }
+        function goToSample() { hideAllScreens(); document.getElementById('step-sample-screen').classList.remove('hidden'); }
+        function goToReadingContent() { hideAllScreens(); document.getElementById('step-reading-content-screen').classList.remove('hidden'); }
+        function goToSentence() { hideAllScreens(); document.getElementById('step-sentence-screen').classList.remove('hidden'); }
+        function goToFullRead() { hideAllScreens(); document.getElementById('step-fullread-screen').classList.remove('hidden'); }
+        function goToQuiz() { hideAllScreens(); document.getElementById('step-quiz-screen').classList.remove('hidden'); }
+        function goToPractice() { hideAllScreens(); document.getElementById('step-practice-screen').classList.remove('hidden'); }
+
+        function openTopicList(topicId) {
+            currentTopicId = topicId;
+            const topic = curriculumData[topicId];
+            document.getElementById('current-topic-name').innerText = topic.title;
+            const container = document.getElementById('lessons-container');
+            container.innerHTML = '';
+            topic.lessons.forEach(lesson => {
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.innerHTML = `<h4>${lesson.name}</h4><p>${lesson.title}</p><span>📖 Bấm vào học bài</span>`;
+                card.onclick = () => startLessonProcess(lesson);
+                container.appendChild(card);
+            });
+            hideAllScreens();
+            document.getElementById('lesson-list-screen').classList.remove('hidden');
+        }
+
+        function wrapWords(text) {
+            return text.split(' ').map(w => `<span class="word">${w}</span>`).join(' ');
+        }
+
+        function startLessonProcess(lesson) {
+            currentLesson = lesson;
+            sampleReadingIndex = 0; 
+            isPaused = false;
+            document.getElementById('sample-title-preview').innerText = lesson.title;
+            document.getElementById('lesson-preview-img').src = lesson.image;
+
+            document.getElementById('sample-title').innerHTML = wrapWords(lesson.title);
+            let contentHtml = "";
+            lesson.paragraphs.forEach(p => { contentHtml += `<p>${wrapWords(p)}</p>`; });
+            contentHtml += `<div class="author-name" style="text-align:right; font-style:italic;">${wrapWords(lesson.author)}</div>`;
+            document.getElementById('sample-content').innerHTML = contentHtml;
+
+            goToSample();
+        }
+
+        function stopAudio() {
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (activeTimer) {
+                clearTimeout(activeTimer);
+                activeTimer = null;
+            }
+            if (sentenceActiveTimer) {
+                clearTimeout(sentenceActiveTimer);
+                sentenceActiveTimer = null;
+            }
+            if (recognition) {
+                try { recognition.stop(); } catch(e) {}
+                recognition = null;
+            }
+            isPaused = false;
+            isSentencePaused = false;
+            document.querySelectorAll('.word').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.word').forEach(s => s.classList.remove('karaoke-read'));
+        }
+
+        function stopAudioAndPause() {
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (activeTimer) {
+                clearTimeout(activeTimer);
+                activeTimer = null;
+            }
+            isPaused = true; 
+        }
+
+        function stopSentenceAudioAndPause() {
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (sentenceActiveTimer) {
+                clearTimeout(sentenceActiveTimer);
+                sentenceActiveTimer = null;
+            }
+            if (recognition) {
+                try { recognition.stop(); } catch(e) {}
+                recognition = null;
+            }
+            isSentencePaused = true;
+            document.querySelectorAll('#step-sentence-screen .word').forEach(s => s.classList.remove('karaoke-read'));
+            document.getElementById('mic-status-label').innerHTML = "🎤 Bấm \"Đọc theo\" để luyện đọc thành tiếng:";
+            document.getElementById('btn-record-action').style.background = "#8e44ad";
+            document.getElementById('btn-record-action').innerText = "🎙️ Đọc theo (Nhận diện)";
+        }
+
+        function stopFullReadAndEvaluate() {
+            if (sentenceActiveTimer) {
+                clearTimeout(sentenceActiveTimer);
+                sentenceActiveTimer = null;
+            }
+            if (recognition) {
+                try { recognition.stop(); } catch(e) {}
+                recognition = null;
+            }
+            document.querySelectorAll('#step-fullread-screen .word').forEach(s => s.classList.remove('karaoke-read'));
+            document.getElementById('fullread-mic-status').innerText = "Em hãy tự đọc to toàn bài, sau đó nhờ Thỏ thông thái chấm điểm nhé!";
+            document.getElementById('btn-fullread-record').style.background = "#8e44ad";
+            document.getElementById('btn-fullread-record').innerText = "🎙️ Đọc toàn bài (Nhận diện)";
+
+            const containerBox = document.getElementById('fullread-content');
+            const titleBox = document.getElementById('fullread-title');
+            const wordSpans = Array.from(titleBox.querySelectorAll('.word')).concat(Array.from(containerBox.querySelectorAll('.word')));
+            const targetText = wordSpans.map(s => s.innerText).join(" ").toLowerCase();
+            analyzeCircular27Result(globalSpokenTranscript, targetText, 'fullread-ai-feedback', 'fullread-grade', 'fullread-comment');
+        }
+
+        function playSampleAudio() {
+            const titleSpans = document.querySelectorAll('#sample-title .word');
+            const contentSpans = document.querySelectorAll('#sample-content .word');
+            const allWordSpans = Array.from(titleSpans).concat(Array.from(contentSpans));
+
+            if (allWordSpans.length === 0) return;
+
+            if (!isPaused) {
+                sampleReadingIndex = 0;
+            }
+            isPaused = false;
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (activeTimer) {
+                clearTimeout(activeTimer);
+                activeTimer = null;
+            }
+
+            function readWord(index) {
+                if (isPaused) return; 
+
+                if (index >= allWordSpans.length) {
+                    sampleReadingIndex = 0;
+                    isPaused = false;
+                    document.querySelectorAll('.word').forEach(s => s.classList.remove('active'));
+                    return;
+                }
+
+                allWordSpans.forEach(s => s.classList.remove('active'));
+                const currentSpan = allWordSpans[index];
+                currentSpan.classList.add('active');
+                currentSpan.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                sampleReadingIndex = index + 1; 
+
+                const utterance = new SpeechSynthesisUtterance(currentSpan.innerText);
+                utterance.lang = 'vi-VN';
+                utterance.rate = 0.9;
+
+                utterance.onend = function() {
+                    if (isPaused) return;
+                    activeTimer = setTimeout(() => {
+                        readWord(index + 1);
+                    }, 280);
+                };
+
+                utterance.onerror = function() {
+                    if (isPaused) return;
+                    readWord(index + 1);
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+
+            readWord(sampleReadingIndex);
+        }
+
+        function goToStepSentence() {
+            stopAudio();
+            sampleReadingIndex = 0;
+            isPaused = false;
+            document.getElementById('vocab-text').innerText = currentLesson.vocab;
+            currentSentenceIndex = 0;
+            renderSentence();
+            hideAllScreens();
+            document.getElementById('step-sentence-screen').classList.remove('hidden');
+        }
+
+        function getSentencesList() {
+            let sentences = [];
+            currentLesson.paragraphs.forEach(p => {
+                let parts = p.split('. ').filter(Boolean);
+                parts.forEach(pt => { sentences.push(pt.trim() + (pt.endsWith('.') ? '' : '.')); });
+            });
+            return sentences;
+        }
+
+        function renderSentence() {
+            stopAudio();
+            let sList = getSentencesList();
+            if (currentSentenceIndex >= sList.length) currentSentenceIndex = sList.length - 1;
+            if (currentSentenceIndex < 0) currentSentenceIndex = 0;
+
+            document.getElementById('sentence-title').innerText = `${currentLesson.title} (Phần ${currentSentenceIndex + 1})`;
+            document.getElementById('sentence-display').innerHTML = wrapWords(sList[currentSentenceIndex]);
+            document.getElementById('sentence-counter').innerText = `Câu ${currentSentenceIndex + 1} / ${sList.length}`;
+            
+            sentenceReadingIndex = 0;
+            isSentencePaused = false;
+            document.getElementById('sentence-ai-feedback').classList.add('hidden');
+        }
+
+        function nextSentence() {
+            stopAudio();
+            let sList = getSentencesList();
+            if (currentSentenceIndex < sList.length - 1) { 
+                currentSentenceIndex++; 
+                renderSentence(); 
+            }
+        }
+
+        function prevSentence() {
+            stopAudio();
+            if (currentSentenceIndex > 0) { 
+                currentSentenceIndex--; 
+                renderSentence(); 
+            }
+        }
+
+        function playCurrentSentence() {
+            const sentenceBox = document.getElementById('sentence-display');
+            const wordSpans = sentenceBox.querySelectorAll('.word');
+            if (wordSpans.length === 0) return;
+
+            if (!isSentencePaused) {
+                sentenceReadingIndex = 0;
+            }
+            isSentencePaused = false;
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (sentenceActiveTimer) {
+                clearTimeout(sentenceActiveTimer);
+                sentenceActiveTimer = null;
+            }
+
+            function readSentenceWord(idx) {
+                if (isSentencePaused) return;
+
+                if (idx >= wordSpans.length) {
+                    sentenceReadingIndex = 0;
+                    isSentencePaused = false;
+                    wordSpans.forEach(s => s.classList.remove('active'));
+                    return;
+                }
+
+                wordSpans.forEach(s => s.classList.remove('active'));
+                wordSpans[idx].classList.add('active');
+
+                sentenceReadingIndex = idx + 1; 
+
+                let utterance = new SpeechSynthesisUtterance(wordSpans[idx].innerText);
+                utterance.lang = 'vi-VN';
+                utterance.rate = 0.9;
+
+                utterance.onend = function() {
+                    if (isSentencePaused) return;
+                    sentenceActiveTimer = setTimeout(() => {
+                        readSentenceWord(idx + 1);
+                    }, 280);
+                };
+
+                utterance.onerror = function() {
+                    if (isSentencePaused) return;
+                    readSentenceWord(idx + 1);
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+
+            readSentenceWord(sentenceReadingIndex);
+        }
+
+        function startSpeechRecognitionRecord() {
+            stopAudio();
+            document.getElementById('sentence-ai-feedback').classList.add('hidden');
+            
+            const sentenceBox = document.getElementById('sentence-display');
+            const wordSpans = sentenceBox.querySelectorAll('.word');
+            if (wordSpans.length === 0) return;
+
+            const targetText = Array.from(wordSpans).map(s => s.innerText).join(" ").toLowerCase();
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                alert("Trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng Google Chrome nhé!");
+                return;
+            }
+
+            recognition = new SpeechRecognition();
+            recognition.lang = 'vi-VN';
+            recognition.interimResults = true;
+            recognition.continuous = true;
+
+            document.getElementById('mic-status-label').innerHTML = "🔴 <b>Micro đang bật... Bé đọc thong thả theo chữ đỏ nhé!</b>";
+            document.getElementById('btn-record-action').style.background = "#e74c3c";
+            document.getElementById('btn-record-action').innerText = "🔴 Đang nghe bé đọc...";
+
+            let readIdx = 0;
+            let spokenTranscript = "";
+            const wordDelay = 3500; 
+
+            function slowKaraokeStep() {
+                if (!recognition) return;
+                if (readIdx < wordSpans.length) {
+                    wordSpans.forEach(s => s.classList.remove('karaoke-read'));
+                    wordSpans[readIdx].classList.add('karaoke-read');
+                    wordSpans[readIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    readIdx++;
+                    sentenceActiveTimer = setTimeout(slowKaraokeStep, wordDelay); 
+                }
+            }
+            slowKaraokeStep();
+
+            recognition.onresult = function(event) {
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    spokenTranscript += event.results[i][0].transcript.toLowerCase();
+                }
+            };
+
+            recognition.onerror = function(event) {
+                console.log("Lỗi micro: ", event.error);
+            };
+
+            recognition.onend = function() {
+                if (sentenceActiveTimer) {
+                    clearTimeout(sentenceActiveTimer);
+                    sentenceActiveTimer = null;
+                }
+                document.getElementById('mic-status-label').innerHTML = "🎤 Bấm \"Đọc theo\" để luyện đọc thành tiếng:";
+                document.getElementById('btn-record-action').style.background = "#8e44ad";
+                document.getElementById('btn-record-action').innerText = "🎙️ Đọc theo (Nhận diện)";
+                wordSpans.forEach(s => s.classList.remove('karaoke-read'));
+
+                analyzeCircular27Result(spokenTranscript, targetText, 'sentence-ai-feedback', 'sentence-grade', 'sentence-comment');
+            };
+
+            let maxDuration = wordSpans.length * wordDelay + 2000;
+            setTimeout(() => {
+                if (recognition) {
+                    try { recognition.stop(); } catch(e) {}
+                }
+            }, maxDuration);
+
+            recognition.start();
+        }
+
+        function startFullReadRecognitionRecord() {
+            stopAudio();
+            document.getElementById('fullread-ai-feedback').classList.add('hidden');
+            globalSpokenTranscript = "";
+
+            const containerBox = document.getElementById('fullread-content');
+            const titleBox = document.getElementById('fullread-title');
+            const wordSpans = Array.from(titleBox.querySelectorAll('.word')).concat(Array.from(containerBox.querySelectorAll('.word')));
+            if (wordSpans.length === 0) return;
+
+            const targetText = wordSpans.map(s => s.innerText).join(" ").toLowerCase();
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                alert("Trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng Google Chrome nhé!");
+                return;
+            }
+
+            recognition = new SpeechRecognition();
+            recognition.lang = 'vi-VN';
+            recognition.interimResults = true;
+            recognition.continuous = true;
+
+            document.getElementById('fullread-mic-status').innerHTML = "🔴 <b>Micro đang bật... Bé đọc thong thả hết bài, xong bấm Dừng / Chấm điểm nhé!</b>";
+            document.getElementById('btn-fullread-record').style.background = "#e74c3c";
+            document.getElementById('btn-fullread-record').innerText = "🔴 Đang nghe bé đọc...";
+
+            let readIdx = 0;
+            const wordDelay = 3500; 
+
+            function slowKaraokeStep() {
+                if (!recognition) return;
+                if (readIdx < wordSpans.length) {
+                    wordSpans.forEach(s => s.classList.remove('karaoke-read'));
+                    wordSpans[readIdx].classList.add('karaoke-read');
+                    wordSpans[readIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    readIdx++;
+                    sentenceActiveTimer = setTimeout(slowKaraokeStep, wordDelay); 
+                } else {
+                    wordSpans.forEach(s => s.classList.remove('karaoke-read'));
+                }
+            }
+            slowKaraokeStep();
+
+            recognition.onresult = function(event) {
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    globalSpokenTranscript += event.results[i][0].transcript.toLowerCase();
+                }
+            };
+
+            recognition.onerror = function(event) {
+                console.log("Lỗi micro: ", event.error);
+            };
+
+            recognition.onend = function() {
+                if (recognition) {
+                    try { recognition.start(); } catch(e) {}
+                }
+            };
+
+            recognition.start();
+        }
+
+        function analyzeCircular27Result(spoken, target, feedbackBoxId, gradeId, commentId) {
+            const feedbackBox = document.getElementById(feedbackBoxId);
+            const gradeElem = document.getElementById(gradeId);
+            const commentElem = document.getElementById(commentId);
+
+            let cleanSpoken = spoken.replace(/[.,\/\/#!$%\^&\*;:{}=\-_`~()?]/g,"").trim();
+            let cleanTarget = target.replace(/[.,\/\/#!$%\^&\*;:{}=\-_`~()?]/g,"").trim();
+
+            let spokenWords = cleanSpoken ? cleanSpoken.split(/\s+/) : [];
+            let targetWords = cleanTarget.split(/\s+/);
+
+            let matchedCount = 0;
+            let missingWords = [];
+            targetWords.forEach(tw => {
+                if (spokenWords.includes(tw)) {
+                    matchedCount++;
+                } else {
+                    missingWords.push(tw);
+                }
+            });
+
+            let accuracy = Math.round((matchedCount / targetWords.length) * 100);
+            if (accuracy > 100) accuracy = 100;
+
+            let specificDetail = missingWords.length > 0 
+                ? `<br>• Từ bé đọc chưa rõ hoặc còn bỏ sót: <i>${missingWords.slice(0, 4).join(', ')}</i>` 
+                : `<br>• Nhận xét: Bé phát âm đầy đủ tất cả các từ trong bài!`;
+
+            if (cleanSpoken.length === 0) {
+                gradeElem.innerText = "💪 Mức đánh giá: Chưa hoàn thành";
+                commentElem.innerHTML = "• Nhận xét chi tiết: Bé chưa đọc hoặc micro chưa bắt được âm thanh.<br>• Gợi ý luyện tập: Bé hãy bật mic to rõ và đọc thong thả theo từng chữ đỏ nhé!";
+            } else if (accuracy >= 60) {
+                gradeElem.innerText = "🌟 Mức đánh giá: Hoàn thành tốt";
+                commentElem.innerHTML = `• Nhận xét chi tiết: Bé đọc rất trôi chảy, phát âm rõ ràng, ngắt nghỉ đúng chỗ.${specificDetail}<br>• Lời khen ngợi: Tuyệt vời! Bé đọc rất xuất sắc, con nhận điểm 10 nhé!`;
+            } else if (accuracy >= 20) {
+                gradeElem.innerText = "👍 Mức đánh giá: Hoàn thành";
+                commentElem.innerHTML = `• Nhận xét chi tiết: Bé đã đọc được bài nhưng còn vấp hoặc sót một vài từ.${specificDetail}<br>• Lời động viên: Cố gắng lên con! Con luyện đọc thêm một lần nữa sẽ rất trôi chảy đấy!`;
+            } else {
+                gradeElem.innerText = "💪 Mức đánh giá: Chưa hoàn thành";
+                commentElem.innerHTML = `• Nhận xét chi tiết: Bé đọc bị sót nhiều chữ hoặc phát âm chưa rõ các từ trong bài.${specificDetail}<br>• Lời động viên: Đừng nản lòng con nhé! Con hãy đọc to và thong thả lại nha!`;
+            }
+
+            feedbackBox.classList.remove('hidden');
+        }
+
+        function simulateRecord() {
+            startSpeechRecognitionRecord();
+        }
+
+        function goToStepFullRead() {
+            stopAudio();
+            sampleReadingIndex = 0;
+            isPaused = false;
+            document.getElementById('fullread-title').innerHTML = wrapWords(currentLesson.title);
+            let contentHtml = "";
+            currentLesson.paragraphs.forEach(p => { contentHtml += `<p>${wrapWords(p)}</p>`; });
+            contentHtml += `<div class="author-name" style="text-align:right; font-style:italic;">${wrapWords(currentLesson.author)}</div>`;
+            document.getElementById('fullread-content').innerHTML = contentHtml;
+            document.getElementById('fullread-ai-feedback').classList.add('hidden');
+
+            hideAllScreens();
+            document.getElementById('step-fullread-screen').classList.remove('hidden');
+        }
+
+        function evaluateByRabbitAI() {
+            startFullReadRecognitionRecord();
+        }
+
+        function goToStepQuiz() {
+            currentQuizIndex = 0;
+            userQuizAnswers = {};
+            renderQuizQuestion();
+            hideAllScreens();
+            document.getElementById('step-quiz-screen').classList.remove('hidden');
+        }
+
+        function renderQuizQuestion() {
+            const quizList = currentLesson.quiz;
+            const qData = quizList[currentQuizIndex];
+
+            document.getElementById('quiz-q-text').innerText = `❓ Câu hỏi ${currentQuizIndex + 1}: ${qData.q}`;
+            document.getElementById('quiz-counter').innerText = `Câu ${currentQuizIndex + 1} / ${quizList.length}`;
+
+            const optContainer = document.getElementById('quiz-options-container');
+            optContainer.innerHTML = '';
+
+            qData.options.forEach((optText, i) => {
+                const div = document.createElement('div');
+                div.className = 'quiz-opt';
+                div.innerText = `${String.fromCharCode(65 + i)}. ${optText}`;
+
+                if (userQuizAnswers[currentQuizIndex] !== undefined) {
+                    div.style.pointerEvents = 'none';
+                    if (i === qData.correct) {
+                        div.classList.add('correct');
+                    } else if (i === userQuizAnswers[currentQuizIndex]) {
+                        div.classList.add('wrong');
+                    }
+                }
+
+                div.onclick = function() {
+                    if (userQuizAnswers[currentQuizIndex] !== undefined) return;
+                    userQuizAnswers[currentQuizIndex] = i;
+
+                    const allOpts = optContainer.querySelectorAll('.quiz-opt');
+                    allOpts.forEach(o => o.style.pointerEvents = 'none');
+
+                    if (i === qData.correct) {
+                        div.classList.add('correct');
+                        div.innerText += " 🎉 Đúng rồi, bé giỏi lắm!";
+                    } else {
+                        div.classList.add('wrong');
+                        allOpts[qData.correct].classList.add('correct');
+                        allOpts[qData.correct].innerText += " ✨ (Đáp án đúng)";
+                    }
+                };
+                optContainer.appendChild(div);
+            });
+
+            document.getElementById('quiz-prev-btn').style.display = currentQuizIndex > 0 ? 'inline-block' : 'none';
+            
+            const nextBtn = document.getElementById('quiz-next-btn');
+            const finishQuizBtn = document.getElementById('finish-quiz-btn');
+
+            if (currentQuizIndex < quizList.length - 1) {
+                nextBtn.style.display = 'inline-block';
+                finishQuizBtn.classList.add('hidden');
+            } else {
+                nextBtn.style.display = 'none';
+                finishQuizBtn.classList.remove('hidden');
+            }
+        }
+
+        function nextQuizQuestion() {
+            if (currentQuizIndex < currentLesson.quiz.length - 1) {
+                currentQuizIndex++;
+                renderQuizQuestion();
+            }
+        }
+
+        function prevQuizQuestion() {
+            if (currentQuizIndex > 0) {
+                currentQuizIndex--;
+                renderQuizQuestion();
+            }
+        }
+
+        function goToStepPractice() {
+            renderPracticeExercises();
+            hideAllScreens();
+            document.getElementById('step-practice-screen').classList.remove('hidden');
+        }
+
+        function renderPracticeExercises() {
+            const practice = currentLesson.practice;
+
+            const matchContainer = document.getElementById('match-container');
+            matchContainer.innerHTML = '';
+            practice.match.forEach((item, idx) => {
+                const row = document.createElement('div');
+                row.className = 'match-row';
+                row.innerHTML = `
+                    <span>${item.left}</span>
+                    <select id="match-${idx}">
+                        <option value="">-- Chọn vế nối phù hợp --</option>
+                        ${practice.match.map(m => `<option value="${m.right}">${m.right}</option>`).join('')}
+                    </select>
+                `;
+                matchContainer.appendChild(row);
+            });
+
+            const tfContainer = document.getElementById('tf-container');
+            tfContainer.innerHTML = '';
+            practice.tf.forEach((item, idx) => {
+                const row = document.createElement('div');
+                row.className = 'tf-row';
+                row.innerHTML = `
+                    <span>${idx + 1}. ${item.q}</span>
+                    <select id="tf-${idx}">
+                        <option value="">-- Chọn --</option>
+                        <option value="true">Đúng (Đ)</option>
+                        <option value="false">Sai (S)</option>
+                    </select>
+                `;
+                tfContainer.appendChild(row);
+            });
+
+            const fillContainer = document.getElementById('fill-container');
+            fillContainer.innerHTML = '';
+            practice.fill.forEach((item, idx) => {
+                const row = document.createElement('div');
+                row.className = 'fill-row';
+                row.innerHTML = `
+                    <span>${item.text}</span>
+                    <input type="text" id="fill-${idx}" placeholder="Nhập từ còn thiếu">
+                `;
+                fillContainer.appendChild(row);
+            });
+
+            document.getElementById('practice-result-msg').innerText = '';
+            document.getElementById('final-done-btn').classList.add('hidden');
+        }
+
+        function checkPracticeResults() {
+            const practice = currentLesson.practice;
+            let currentCorrectCount = 0;
+            let totalQuestions = practice.match.length + practice.tf.length + practice.fill.length;
+
+            practice.match.forEach((item, idx) => {
+                const val = document.getElementById(`match-${idx}`).value;
+                if (val !== "" && val === item.right) {
+                    currentCorrectCount++;
+                }
+            });
+
+            practice.tf.forEach((item, idx) => {
+                const val = document.getElementById(`tf-${idx}`).value;
+                if (val !== "" && (val === 'true') === item.ans) {
+                    currentCorrectCount++;
+                }
+            });
+
+            practice.fill.forEach((item, idx) => {
+                const val = document.getElementById(`fill-${idx}`).value.trim().toLowerCase();
+                if (val !== "" && item.answer.toLowerCase().includes(val)) {
+                    currentCorrectCount++;
+                }
+            });
+
+            const msg = document.getElementById('practice-result-msg');
+            
+            // ĐIỀU CHỈNH THÔNG ĐIỆP ĐÁNH GIÁ: Sửa lại logic thông minh không khen bừa khi 0 câu đúng
+            if (currentCorrectCount === totalQuestions) {
+                msg.innerText = `🎉 Tuyệt vời xuất sắc! Bạn trả lời đúng ${currentCorrectCount} / ${totalQuestions} câu. Bé nhận điểm 10 tuyệt đối!`;
+            } else if (currentCorrectCount > 0) {
+                msg.innerText = `👍 Khá lắm! Bạn trả lời đúng ${currentCorrectCount} / ${totalQuestions} câu. Cố gắng thêm chút nữa nhé!`;
+            } else {
+                msg.innerText = `💪 Bé chưa trả lời đúng câu nào (${currentCorrectCount} / ${totalQuestions}). Con hãy đọc lại bài và thử lại nha!`;
+            }
+
+            document.getElementById('final-done-btn').classList.remove('hidden');
+        }
+
+        function finishLesson() {
+            hideAllScreens();
+            document.getElementById('step-done-screen').classList.add('hidden');
+            document.getElementById('step-done-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
